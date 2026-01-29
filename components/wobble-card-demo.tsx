@@ -24,7 +24,7 @@ export default function WobbleCardDemo() {
                                 variant="paragraph"
                                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                                 animation="fade"
-                                delay={3.1}
+                                delay={1.0}
                             />
                         </div>
                     </div>
