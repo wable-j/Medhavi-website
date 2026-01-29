@@ -1,9 +1,12 @@
 "use client"
 
 import { useEffect } from "react"
-import { motion, useAnimation } from "framer-motion"
+import { motion, useAnimation, type Variants } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { cn } from "@/lib/utils"
+
+
+type AnimationType = "fade" | "slide" | "bounce" | "typewriter" | "wave"
 
 type AnimatedTextProps = {
   text: string
@@ -13,11 +16,14 @@ type AnimatedTextProps = {
   delay?: number
   duration?: number
   staggerChildren?: number
-  animation?: "fade" | "slide" | "bounce" | "typewriter" | "wave"
+  animation?: AnimationType
   color?: string
 }
 
-const defaultAnimations = {
+// ... (imports)
+
+// Animation variants
+const defaultAnimations: Record<AnimationType, Variants> = {
   fade: {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
@@ -31,8 +37,11 @@ const defaultAnimations = {
     visible: { opacity: 1, y: 0, transition: { type: "spring", bounce: 0.5 } },
   },
   typewriter: {
-    hidden: { opacity: 0, width: 0 },
-    visible: { opacity: 1, width: "100%" },
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.1 }, // Fast fade in per char
+    },
   },
   wave: {
     hidden: { opacity: 0, y: 20 },
@@ -54,7 +63,7 @@ export function AnimatedText({
   once = true,
   delay = 0,
   duration = 0.5,
-  staggerChildren = 0.03,
+  staggerChildren, // removed default here to calculate it if type is typewriter
   animation = "slide",
   color,
 }: AnimatedTextProps) {
@@ -72,38 +81,30 @@ export function AnimatedText({
     }
   }, [controls, inView, once])
 
-  if (animation === "wave") {
+  // Handle character-based animations (wave, typewriter)
+  if (animation === "wave" || animation === "typewriter") {
+    // Calculate stagger for typewriter if not provided
+    const calculatedStagger = staggerChildren ?? (animation === "typewriter" ? duration / (text.length || 1) : 0.03)
+
     return (
       <motion.div
         ref={ref}
         className={cn("inline-block", className)}
         initial="hidden"
         animate={controls}
-        transition={{ staggerChildren, delayChildren: delay }}
+        transition={{ staggerChildren: calculatedStagger, delayChildren: delay }}
       >
         {text.split("").map((char, i) => (
-          <motion.span key={`${char}-${i}`} className="inline-block" custom={i} variants={defaultAnimations.wave}>
+          <motion.span
+            key={`${char}-${i}`}
+            className={cn(animation === "wave" ? "inline-block" : "inline")} // inline for typewriter to keep flow/gradient potentially better
+            custom={i}
+            variants={defaultAnimations[animation]}
+          >
             {char === " " ? "\u00A0" : char}
           </motion.span>
         ))}
       </motion.div>
-    )
-  }
-
-  if (animation === "typewriter") {
-    return (
-      <div className={cn("inline-block overflow-hidden", className)}>
-        <motion.div
-          ref={ref}
-          initial="hidden"
-          animate={controls}
-          variants={defaultAnimations.typewriter}
-          transition={{ duration: duration * 2, delay, ease: "easeInOut" }}
-          style={{ color }}
-        >
-          {text}
-        </motion.div>
-      </div>
     )
   }
 

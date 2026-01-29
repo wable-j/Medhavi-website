@@ -10,11 +10,14 @@ export function SiteFooter() {
           <div className="flex flex-1 flex-col gap-4">
             <Link href="/" className="flex items-center gap-2">
               <Icons.logo className="h-6 w-6" />
-              <span className="font-heading text-xl tracking-tight">ComponentCraft</span>
+              <span className="font-heading text-xl tracking-tight">Medhavi</span>
             </Link>
             <p className="text-muted-foreground max-w-sm opacity-70">
-              Modern UI component library built with shadcn/ui and Aceternity UI for web developers and designers in the
-              AI software niche.
+              Medhavy turns textbooks into AI-curated, conversational courses inside any LTI-compliant LMS—reducing
+              faculty workload, unifying fragmented content, and giving students effortless access to knowledge.
+              <br />
+              <br />
+              Led by Professor Sridhar Srinivas with support from Humanitarians AI fellows.
             </p>
             <div className="flex gap-4">
               <Link href="https://twitter.com" target="_blank" rel="noreferrer" className="glassmorphic-icon">
@@ -145,9 +148,10 @@ export function SiteFooter() {
             </div>
           </div>
         </div>
+        <div className="border-t border-border/40" />
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <p className="text-sm text-muted-foreground opacity-70">
-            &copy; {new Date().getFullYear()} ComponentCraft. All rights reserved.
+            &copy; {new Date().getFullYear()} Medhavi. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link

@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --background: 210 20% 98%; /* Soft off-white/cool gray */
+    --foreground: 222.2 47.4% 11.2%; /* Deep slate for high readability */
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 222.2 47.4% 11.2%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 346.8 77.2% 49.8%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --primary: 346.8 77.2% 49.8%; /* Keep the red brand color */
     --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --secondary: 210 40% 96.1%; /* Cool light gray for secondary elements */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 93%; /* Darker than background for visible section blocking */
+    --muted-foreground: 215.4 16.3% 40%; /* Darker gray for better text visibility */
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
     --ring: 346.8 77.2% 49.8%;
     --radius: 0.75rem;
   }
@@ -76,144 +76,36 @@
 
   /* Glassmorphic UI Elements */
   .glassmorphic-card {
+    background-color: rgba(255, 255, 255, 0.7); /* Lighter glass for light mode */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); /* Softer shadow */
+    transition: all 300ms ease-in-out;
+  }
+
+  .dark .glassmorphic-card {
     background-color: rgba(var(--background), 0.6);
-    backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 0.75rem;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    transition: all 300ms ease-in-out;
   }
 
-  .glassmorphic-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  }
+  /* ... other glassmorphic classes ... */
 
-  .glassmorphic-inner-card {
-    background-color: rgba(var(--background), 0.4);
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 0.75rem;
-  }
-
-  .glassmorphic-dropdown {
-    background-color: rgba(var(--background), 0.8);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(var(--border), 0.5);
-    border-radius: 0.75rem;
-  }
-
-  .glassmorphic-tabs {
-    background-color: rgba(var(--background), 0.6);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(var(--border), 0.5);
-    border-radius: 9999px;
-  }
-
-  .glassmorphic-avatar {
-    background-color: rgba(var(--background), 0.6);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(var(--border), 0.5);
-    border-radius: 9999px;
-  }
-
-  .glassmorphic-icon {
-    background-color: rgba(var(--background), 0.6);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(var(--border), 0.5);
-    border-radius: 9999px;
-    padding: 0.5rem;
-    transition: background-color 300ms;
-  }
-
-  .glassmorphic-icon:hover {
-    background-color: rgba(var(--background), 0.8);
-  }
-
-  .glassmorphic-accordion-item {
-    border-bottom: 1px solid rgba(var(--border), 0.5);
-  }
-
-  /* Neumorphic UI Elements */
-  .neumorphic-button {
-    background-color: rgba(var(--secondary), 0.5);
-    border-radius: 0.75rem;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.05);
-    transition: all 300ms ease-in-out;
-  }
-
-  .neumorphic-button:hover {
-    background-color: rgba(var(--secondary), 0.7);
-    transform: scale(1.03);
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15), -6px -6px 15px rgba(255, 255, 255, 0.07);
-  }
-
-  .neumorphic-button-primary {
-    background-color: rgba(var(--primary), 0.9);
-    color: hsl(var(--primary-foreground));
-    border-radius: 0.75rem;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(255, 255, 255, 0.05);
-    transition: all 300ms ease-in-out;
-  }
-
-  .neumorphic-button-primary:hover {
-    background-color: hsl(var(--primary));
-    transform: scale(1.03);
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.25), -6px -6px 15px rgba(255, 255, 255, 0.07);
-  }
-
-  .neumorphic-button-outline {
-    background-color: transparent;
-    border: 1px solid hsl(var(--border));
-    border-radius: 0.75rem;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.05);
-    transition: all 300ms ease-in-out;
-  }
-
-  .neumorphic-button-outline:hover {
-    background-color: rgba(var(--accent), 0.1);
-    transform: scale(1.03);
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15), -6px -6px 15px rgba(255, 255, 255, 0.07);
-  }
-
-  .neumorphic-button-floating {
-    border-radius: 0.75rem;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(255, 255, 255, 0.05);
-    transition: all 300ms;
-  }
-
-  .neumorphic-button-floating:hover {
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2), -6px -6px 15px rgba(255, 255, 255, 0.05);
-  }
-
-  /* Soft Glow Effects */
-  .soft-glow {
-    position: relative;
-  }
-
-  .soft-glow::before {
-    content: "";
-    position: absolute;
-    inset: -2px;
-    border-radius: 0.75rem;
-    opacity: 0;
-    transition: opacity 300ms;
-    background: radial-gradient(circle at 50% 50%, rgba(220, 38, 38, 0.4), transparent 70%);
-    z-index: -1;
-  }
-
-  .soft-glow:hover::before {
-    opacity: 1;
-  }
-
-  /* Gradient Text */
+  /* Gradient Text - Updated for better visibility */
   .gradient-text {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to right, #ef4444, #f87171, #d1d5db);
+    /* Stronger, darker gradient for light mode: Red -> Purple -> Blue */
+    background-image: linear-gradient(to right, #dc2626, #7c3aed, #2563eb); 
     background-size: 200% 200%;
     animation: gradientFlow 8s ease infinite;
+  }
+  
+  .dark .gradient-text {
+     /* Lighter gradient for dark mode */
+     background-image: linear-gradient(to right, #ef4444, #f87171, #d1d5db);
   }
 
   @keyframes gradientFlow {

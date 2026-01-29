@@ -25,10 +25,10 @@ const fontHeading = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "ComponentCraft | Modern UI Component Library",
-  description: "A premium component library built with shadcn/ui and Aceternity UI for modern web applications",
-  keywords: ["component library", "UI components", "React", "Next.js", "shadcn/ui", "Aceternity UI"],
-    generator: 'v0.app'
+  title: "Medhavi",
+  description: "Medhavy turns textbooks into AI-curated, conversational courses inside any LTI-compliant LMS—reducing faculty workload, unifying fragmented content, and giving students effortless access to knowledge.",
+  keywords: ["Medhavy", "LTI", "LMS", "AI-curated courses", "faculty workload", "unifying fragmented content", "effortless access to knowledge", "AI-curated courses", "faculty workload", "unifying fragmented content", "effortless access to knowledge"],
+  generator: 'Medhavy'
 }
 
 export default function RootLayout({

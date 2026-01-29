@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { AnimatedText } from "@/components/ui/animated-text"
+import { Typewriter } from "@/components/ui/typewriter"
 import { motion } from "framer-motion"
 import { AnimatedGradientBorder } from "@/components/ui/animated-gradient-border"
 import { GradientButton } from "@/components/ui-library/buttons/gradient-button"
@@ -15,14 +16,15 @@ export function CtaSection() {
         <ScrollReveal>
           <div className="flex flex-col items-center justify-center space-y-6 text-center">
             <div className="space-y-4">
-              <AnimatedText
-                text="Ready to Build Amazing UIs?"
-                variant="heading"
+              <Typewriter
+                words={["Ready to Transform Your Courses?", "Ready to Revolutionize Learning?", "Ready to Empower Students?"]}
                 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl gradient-text"
-                animation="wave"
+                typingSpeed={80}
+                deletingSpeed={40}
+                delayBetweenWords={3000}
               />
               <AnimatedText
-                text="Get started with our component library today and transform your web development workflow."
+                text="Medhavy turns textbooks into AI-curated, conversational courses inside any LTI-compliant LMS reducing faculty workload and giving students effortless access to knowledge."
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"
@@ -44,7 +46,7 @@ export function CtaSection() {
                 asChild
               >
                 <Link href="#pricing" className="flex items-center">
-                  Get Started
+                  Request a Demo
                   <motion.span
                     className="ml-2 inline-block"
                     animate={{ x: [0, 5, 0] }}
@@ -61,7 +63,7 @@ export function CtaSection() {
                 duration={6}
               >
                 <OutlineButton size="lg" className="bg-background w-full h-full border-0 px-8 py-3" asChild>
-                  <Link href="#components">View Components</Link>
+                  <Link href="#components">Learn More</Link>
                 </OutlineButton>
               </AnimatedGradientBorder>
             </motion.div>

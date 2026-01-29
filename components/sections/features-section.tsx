@@ -1,5 +1,5 @@
 "use client"
-import { Code, Layers, Palette, Sparkles, Zap, Shield } from "lucide-react"
+import { Brain, BookOpen, Users, Clock, ShieldCheck, BarChart } from "lucide-react"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ScrollReveal } from "@/components/scroll-reveal"
@@ -12,51 +12,51 @@ import { ProgressCard } from "@/components/ui-library/cards/progress-card"
 export function FeaturesSection() {
   const features = [
     {
-      icon: <Layers className="h-10 w-10 text-red-500" />,
-      title: "Composable Components",
-      description: "Build complex UIs with our composable and reusable component library.",
-      progress: 100,
+      icon: <Brain className="h-10 w-10 text-red-500" />,
+      title: "Learning Science Rooted",
+      description: "Built on conceptual scaffolding, spaced repetition, and evidence-based teaching practices.",
+      progress: 98,
       borderClass: "border-glow-red",
     },
     {
-      icon: <Palette className="h-10 w-10 text-blue-500" />,
-      title: "Customizable Themes",
-      description: "Easily customize colors, fonts, and styles to match your brand identity.",
-      progress: 90,
+      icon: <BookOpen className="h-10 w-10 text-blue-500" />,
+      title: "Strictly Grounded AI",
+      description: "AI answers strictly from your uploaded course materials. No hallucinations. No off-topic wandering.",
+      progress: 100,
       borderClass: "border-glow-blue",
     },
     {
-      icon: <Zap className="h-10 w-10 text-yellow-500" />,
-      title: "Performance Optimized",
-      description: "Lightweight components designed for optimal performance and loading times.",
-      progress: 95,
+      icon: <Clock className="h-10 w-10 text-yellow-500" />,
+      title: "Effortless Course Prep",
+      description: "Reduce course preparation time from weeks to hours using automated content ingestion.",
+      progress: 90,
       borderClass: "border-glow-yellow",
     },
     {
-      icon: <Code className="h-10 w-10 text-green-500" />,
-      title: "TypeScript Ready",
-      description: "Fully typed components for better developer experience and fewer bugs.",
-      progress: 100,
+      icon: <Users className="h-10 w-10 text-green-500" />,
+      title: "AI Co-Instructor",
+      description: "Your digital teaching assistant that drafts quizzes, summaries, and lecture notes for your review.",
+      progress: 95,
       borderClass: "border-glow-green",
     },
     {
-      icon: <Sparkles className="h-10 w-10 text-purple-500" />,
-      title: "Interactive Animations",
-      description: "Beautiful animations and transitions powered by Framer Motion.",
-      progress: 85,
+      icon: <BarChart className="h-10 w-10 text-purple-500" />,
+      title: "Actionable Analytics",
+      description: "Real-time insights into student engagement, question patterns, and learning gaps.",
+      progress: 92,
       borderClass: "border-glow-purple",
     },
     {
-      icon: <Shield className="h-10 w-10 text-orange-500" />,
-      title: "Accessibility First",
-      description: "Fully accessible components that work for all users and comply with WCAG standards.",
-      progress: 92,
+      icon: <ShieldCheck className="h-10 w-10 text-orange-500" />,
+      title: "Enterprise Secure",
+      description: "FERPA compliant and LTI 1.3 integrated, delivering secure, scalable, and institution-ready performance.",
+      progress: 100,
       borderClass: "border-glow-orange",
     },
   ]
 
   return (
-    <section id="features" className="relative w-full py-12 md:py-24 lg:py-32 bg-muted/30 overflow-hidden">
+    <section id="features" className="relative w-full py-12 md:py-24 lg:py-32 overflow-hidden">
       <AnimatedBackground variant="dots" color="rgba(220, 38, 38, 0.05)" />
 
       <div className="container px-6 md:px-8">
@@ -64,17 +64,17 @@ export function FeaturesSection() {
           <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
             <div className="space-y-4">
               <AnimatedText
-                text="Powerful Features for Modern Web Development"
+                text="The Medhavy Advantage"
                 variant="heading"
                 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl gradient-text"
                 animation="slide"
               />
               <AnimatedText
-                text="Our component library provides everything you need to build beautiful, interactive, and accessible web applications."
+                text="Why leading institutions and educators are switching to Medhavy's AI-powered intelligent textbook system."
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"
-                delay={0.3}
+                delay={0.5}
               />
             </div>
           </div>
@@ -110,6 +110,7 @@ export function FeaturesSection() {
                         showPercentage
                         variant="minimal"
                         progressColor={feature.progress === 100 ? "bg-green-500" : "bg-red-500"}
+                        animationDuration={2.5}
                       />
                     </CardContent>
                   </Card>

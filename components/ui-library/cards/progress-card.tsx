@@ -17,10 +17,11 @@ interface ProgressCardProps {
   showPercentage?: boolean
   showFraction?: boolean
   className?: string
-  variant?: "default" | "minimal" | "gradient" | "outlined"
+  variant?: "default" | "minimal" | "gradient" | "outlined" | "glass"
   progressColor?: string
   trackColor?: string
   animated?: boolean
+  animationDuration?: number
   icon?: React.ReactNode
 }
 
@@ -37,6 +38,7 @@ export function ProgressCard({
   progressColor,
   trackColor,
   animated = true,
+  animationDuration = 1,
   icon,
 }: ProgressCardProps) {
   const [isHovered, setIsHovered] = useState(false)
@@ -58,6 +60,7 @@ export function ProgressCard({
     minimal: "bg-transparent",
     gradient: "bg-gradient-to-br from-red-900/20 to-gray-900/20 border border-red-900/10",
     outlined: "bg-transparent border-2 border-primary/20",
+    glass: "bg-background/60 backdrop-blur-lg border border-white/10",
   }
 
   const progressColorClass = progressColor || statusColors[status]
@@ -67,7 +70,7 @@ export function ProgressCard({
     if (inView && animated) {
       controls.start({
         width: `${percentage}%`,
-        transition: { duration: 1, ease: "easeOut" },
+        transition: { duration: animationDuration, ease: "easeOut" },
       })
     }
   }, [controls, inView, percentage, animated])

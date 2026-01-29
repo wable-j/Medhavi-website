@@ -9,30 +9,32 @@ import { AnimatedBackground } from "@/components/ui/animated-background"
 export function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Alex Johnson",
-      role: "Frontend Developer",
+      name: "Jugal Wable",
+      role: "Student",
       content:
-        "This component library has saved me countless hours of development time. The components are beautifully designed and easy to customize.",
-      avatar: "AJ",
+        "Medhavi turns the intimidation of a static textbook into an interactive mentor, making complex subjects feel personalized and actually accessible.",
+      avatar: "JW",
+      image: "/testimonials/jugal-wable.jpg",
     },
     {
-      name: "Sarah Chen",
-      role: "UI/UX Designer",
+      name: "Nina Harris",
+      role: "Professor",
       content:
-        "As a designer, I appreciate the attention to detail in these components. They're not only functional but also aesthetically pleasing.",
-      avatar: "SC",
+        "Finally, a platform that prioritizes pedagogy over bells and whistles, giving educators a living, AI-integrated textbook that adapts to our specific curriculum and student needs.",
+      avatar: "NH",
+      image: "/testimonials/nina-harris.jpg",
     },
     {
-      name: "Michael Rodriguez",
-      role: "Product Manager",
+      name: "Sridhar Srinivas",
+      role: "Professor",
       content:
-        "Our team's productivity has increased significantly since we started using this library. The documentation is excellent and the components are robust.",
-      avatar: "MR",
+        "Medhavi is clearly built by those who understand the classroom, transforming the traditional textbook into a dynamic, educator-driven tool that truly aligns with how we teach.",
+      avatar: "SS",
     },
   ]
 
   return (
-    <section id="testimonials" className="relative w-full py-12 md:py-24 lg:py-32 bg-muted/30 overflow-hidden">
+    <section id="testimonials" className="relative w-full py-12 md:py-24 lg:py-32 overflow-hidden">
       <AnimatedBackground variant="waves" color="rgba(220, 38, 38, 0.05)" />
 
       <div className="container px-4 md:px-6">
@@ -42,11 +44,11 @@ export function TestimonialsSection() {
               <AnimatedText
                 text="What Our Users Say"
                 variant="heading"
-                className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl"
+                className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl gradient-text"
                 animation="slide"
               />
               <AnimatedText
-                text="Hear from developers and designers who use our component library in their projects."
+                text="Hear from educators and students who use our platform in their classrooms."
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"
@@ -58,9 +60,13 @@ export function TestimonialsSection() {
 
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
-            <ScrollReveal key={index} delay={index * 0.1}>
-              <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 300 }}>
-                <Card className="h-full glassmorphic-card group">
+            <ScrollReveal key={index} delay={index * 0.1} className="h-full">
+              <motion.div
+                whileHover={{ y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="h-full"
+              >
+                <Card className="h-full glassmorphic-card group bg-white/90 dark:bg-background/60 shadow-lg">
                   <CardHeader>
                     <div className="flex items-center gap-4">
                       <motion.div
@@ -69,7 +75,7 @@ export function TestimonialsSection() {
                       >
                         <Avatar className="glassmorphic-avatar border-2 border-transparent group-hover:border-red-500 transition-colors">
                           <AvatarImage
-                            src={`/placeholder.svg?height=40&width=40&text=${testimonial.avatar}`}
+                            src={testimonial.image || `/placeholder.svg?height=40&width=40&text=${testimonial.avatar}`}
                             alt={testimonial.name}
                           />
                           <AvatarFallback>{testimonial.avatar}</AvatarFallback>

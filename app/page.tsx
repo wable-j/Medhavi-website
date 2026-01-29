@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/sections/hero-section"
 import { FeaturesSection } from "@/components/sections/features-section"
 import { ComponentLibraryShowcase } from "@/components/sections/component-library-showcase"
+import WobbleCardDemo from "@/components/wobble-card-demo"
 import { TestimonialsSection } from "@/components/sections/testimonials-section"
 import { PricingSection } from "@/components/sections/pricing-section"
 import { BlogSection } from "@/components/sections/blog-section"
@@ -24,11 +25,12 @@ export default function HomePage() {
       />
 
       <HeroSection />
+      <WobbleCardDemo />
       <FeaturesSection />
       <ComponentLibraryShowcase />
       <TestimonialsSection />
-      <PricingSection />
-      <BlogSection />
+      {/* <PricingSection /> */}
+      {/* <BlogSection /> */}
       <FaqSection />
       <CtaSection />
     </main>
