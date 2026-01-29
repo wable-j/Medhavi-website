@@ -9,11 +9,11 @@ export default function WobbleCardDemo() {
     return (
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 overflow-hidden">
             <div className="container px-4 md:px-6">
-                <ScrollReveal delay={2.5}>
+                <ScrollReveal>
                     <div className="flex flex-col items-center justify-center space-y-6 text-center mb-16">
                         <div className="space-y-4">
                             <AnimatedText
-                                text="What Medhavy Does "
+                                text="What Medhavi Does "
                                 variant="heading"
                                 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl gradient-text"
                                 animation="wave"
@@ -30,7 +30,7 @@ export default function WobbleCardDemo() {
                     </div>
                 </ScrollReveal>
 
-                <ScrollReveal delay={3.0}>
+                <ScrollReveal delay={1.0}>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
                         <WobbleCard
                             containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
