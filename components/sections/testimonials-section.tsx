@@ -12,7 +12,7 @@ export function TestimonialsSection() {
       name: "Jugal Wable",
       role: "Student",
       content:
-        "Medhavi turns the intimidation of a static textbook into an interactive mentor, making complex subjects feel personalized and actually accessible.",
+        "Medhavy turns the intimidation of a static textbook into an interactive mentor, making complex subjects feel personalized and actually accessible.",
       avatar: "JW",
       image: "/testimonials/jugal-wable.jpg",
     },
@@ -28,7 +28,7 @@ export function TestimonialsSection() {
       name: "Sridhar Srinivas",
       role: "Professor",
       content:
-        "Medhavi is clearly built by those who understand the classroom, transforming the traditional textbook into a dynamic, educator-driven tool that truly aligns with how we teach.",
+        "Medhavy is clearly built by those who understand the classroom, transforming the traditional textbook into a dynamic, educator-driven tool that truly aligns with how we teach.",
       avatar: "SS",
     },
   ]

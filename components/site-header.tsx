@@ -34,7 +34,7 @@ export function SiteHeader() {
         <NavBody>
           <Link href="/" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
             <Icons.logo className="h-6 w-6 fill-black dark:fill-white" />
-            <span className="font-medium text-black dark:text-white">Medhavi</span>
+            <span className="font-medium text-black dark:text-white">Medhavy</span>
           </Link>
 
           <NavItems items={navItems} />
@@ -58,7 +58,7 @@ export function SiteHeader() {
           <MobileNavHeader>
             <Link href="/" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
               <Icons.logo className="h-6 w-6 fill-black dark:fill-white" />
-              <span className="font-medium text-black dark:text-white">Medhavi</span>
+              <span className="font-medium text-black dark:text-white">Medhavy</span>
             </Link>
             <MobileNavToggle
               isOpen={isMobileMenuOpen}

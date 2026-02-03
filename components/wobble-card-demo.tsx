@@ -13,7 +13,7 @@ export default function WobbleCardDemo() {
                     <div className="flex flex-col items-center justify-center space-y-6 text-center mb-16">
                         <div className="space-y-4">
                             <AnimatedText
-                                text="What Medhavi Does "
+                                text="What Medhavy Does "
                                 variant="heading"
                                 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl gradient-text"
                                 animation="wave"

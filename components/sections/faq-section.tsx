@@ -72,7 +72,7 @@ export function FaqSection() {
                 Frequently Asked Questions
               </h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70">
-                Common questions about transforming your learning experience with Medhavi.
+                Common questions about transforming your learning experience with Medhavy.
               </p>
             </div>
           </div>

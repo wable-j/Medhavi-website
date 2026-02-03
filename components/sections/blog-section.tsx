@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react"
 export function BlogSection() {
   const blogPosts = [
     {
-      title: "Building Modern UIs with Medhavi",
+      title: "Building Modern UIs with Medhavy",
       description: "Learn how to create stunning user interfaces using our component library.",
       date: "May 15, 2023",
       readTime: "5 min read",
