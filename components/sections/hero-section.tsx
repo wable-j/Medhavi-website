@@ -140,10 +140,11 @@ export function HeroSection() {
               <div className="relative z-20 h-full w-full rounded-xl bg-black overflow-hidden shadow-2xl">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/GN7yQntWJHU?si=yO67DuOfmjv-eH70"
+                  src="https://www.youtube.com/embed/iT6pYsoCz60?si=eOkChzZhO4ubCFDO"
                   title="Medhavy Introduction"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
+                  referrerPolicy="strict-origin-when-cross-origin"
                 />
               </div>
             </SpotlightCard>
