@@ -49,16 +49,16 @@ export function ProgressCard({
 
   const statusColors = {
     default: "bg-primary",
-    success: "bg-green-500",
-    warning: "bg-yellow-500",
-    error: "bg-red-500",
+    success: "bg-blue-600",
+    warning: "bg-red-600",
+    error: "bg-red-700",
     info: "bg-blue-500",
   }
 
   const variantClasses = {
     default: "bg-card border shadow-sm",
     minimal: "bg-transparent",
-    gradient: "bg-gradient-to-br from-red-900/20 to-gray-900/20 border border-red-900/10",
+    gradient: "bg-gradient-to-br from-red-900/20 to-blue-900/10 border border-red-900/10",
     outlined: "bg-transparent border-2 border-primary/20",
     glass: "bg-background/60 backdrop-blur-lg border border-white/10",
   }
@@ -78,7 +78,7 @@ export function ProgressCard({
   const getStatusIcon = () => {
     switch (status) {
       case "success":
-        return <CheckCircle2 className="h-5 w-5 text-green-500" />
+        return <CheckCircle2 className="h-5 w-5 text-blue-600" />
       case "warning":
       case "error":
         return <AlertCircle className="h-5 w-5 text-red-500" />

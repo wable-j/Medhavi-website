@@ -42,7 +42,7 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative w-full py-12 md:py-24 lg:py-32 xl:py-48 overflow-hidden">
-      <AnimatedBackground variant="gradient" color="rgba(220, 38, 38, 0.08)" secondaryColor="rgba(75, 85, 99, 0.08)" />
+      <AnimatedBackground variant="gradient" color="rgba(220, 38, 38, 0.08)" secondaryColor="rgba(30, 64, 175, 0.08)" />
 
       <div className="container px-6 md:px-8">
         <div className="grid gap-8 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
@@ -71,7 +71,7 @@ export function HeroSection() {
                     delay={1}
                   />
                 </h1>
-                <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400 opacity-70">
+                <p className="max-w-[600px] text-muted-foreground md:text-xl opacity-70">
                   Medhavy turns any textbook into a personalized, AI-curated conversational learning experience inside any LTI-compliant LMS. Built by educators, for educators.
                 </p>
                 <motion.p
@@ -127,7 +127,7 @@ export function HeroSection() {
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground flex items-center">
-                  <span className="inline-block w-2 h-2 rounded-full bg-green-500 mr-2"></span>
+                  <span className="inline-block w-2 h-2 rounded-full bg-red-600 mr-2"></span>
                   Trusted by 2,000+ Students worldwide
                 </p>
               </motion.div>
@@ -136,7 +136,7 @@ export function HeroSection() {
 
           <ScrollReveal delay={0.3}>
             <SpotlightCard className="relative h-[300px] md:h-[450px] w-full overflow-hidden rounded-xl border glassmorphic-card p-1 border-glow-red">
-              <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-transparent to-gray-900/20 z-10 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-transparent to-blue-900/20 z-10 pointer-events-none"></div>
               <div className="relative z-20 h-full w-full rounded-xl bg-black overflow-hidden shadow-2xl">
                 <iframe
                   className="w-full h-full"

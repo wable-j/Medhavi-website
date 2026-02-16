@@ -4,48 +4,48 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%; /* Soft off-white/cool gray */
-    --foreground: 222.2 47.4% 11.2%; /* Deep slate for high readability */
+    --background: 210 20% 98%; /* Light off-white with blue tint */
+    --foreground: 210 73% 14%; /* Dark navy for high readability */
     --card: 0 0% 100%; /* Pure white cards */
-    --card-foreground: 222.2 47.4% 11.2%;
+    --card-foreground: 210 73% 14%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
-    --primary: 346.8 77.2% 49.8%; /* Keep the red brand color */
-    --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 210 40% 96.1%; /* Cool light gray for secondary elements */
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 93%; /* Darker than background for visible section blocking */
-    --muted-foreground: 215.4 16.3% 40%; /* Darker gray for better text visibility */
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 346.8 77.2% 49.8%;
+    --popover-foreground: 210 73% 14%;
+    --primary: 0 71% 50%; /* Bright red for CTAs and highlights */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 92% 60%; /* Light blue for secondary elements */
+    --secondary-foreground: 210 73% 14%;
+    --muted: 220 40% 88%; /* Light blue-tinted gray */
+    --muted-foreground: 210 73% 14%; /* Dark navy text */
+    --accent: 221 71% 40%; /* Medium blue for accents */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 35%; /* Dark red for destructive actions */
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 40% 88%; /* Light blue border */
+    --input: 220 40% 88%; /* Light blue input background */
+    --ring: 0 71% 50%; /* Bright red focus ring */
     --radius: 0.75rem;
   }
 
   .dark {
-    --background: 20 14.3% 4.1%;
-    --foreground: 0 0% 95%;
-    --card: 24 9.8% 10%;
+    --background: 210 40% 6%; /* Very dark navy background */
+    --foreground: 0 0% 95%; /* Light text for contrast */
+    --card: 210 30% 12%; /* Dark card with blue tint */
     --card-foreground: 0 0% 95%;
-    --popover: 0 0% 9%;
+    --popover: 210 30% 12%;
     --popover-foreground: 0 0% 95%;
-    --primary: 346.8 77.2% 49.8%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 12 6.5% 15.1%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 346.8 77.2% 49.8%;
+    --primary: 0 71% 50%; /* Bright red for CTAs */
+    --primary-foreground: 210 40% 6%;
+    --secondary: 217 92% 60%; /* Light blue */
+    --secondary-foreground: 210 40% 6%;
+    --muted: 210 20% 35%; /* Muted dark blue */
+    --muted-foreground: 0 0% 70%;
+    --accent: 221 71% 40%; /* Medium blue */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%; /* Bright red destructive */
+    --destructive-foreground: 210 40% 6%;
+    --border: 210 30% 20%; /* Dark blue border */
+    --input: 210 30% 20%; /* Dark input background */
+    --ring: 0 71% 50%; /* Bright red focus ring */
   }
 }
 
@@ -92,20 +92,20 @@
 
   /* ... other glassmorphic classes ... */
 
-  /* Gradient Text - Updated for better visibility */
+  /* Gradient Text - Updated for new color scheme: Blue -> Red */
   .gradient-text {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    /* Stronger, darker gradient for light mode: Red -> Purple -> Blue */
-    background-image: linear-gradient(to right, #dc2626, #7c3aed, #2563eb); 
+    /* New gradient: Blue -> Red */
+    background-image: linear-gradient(to right, #3b82f6, #dc2626, #dc2626);
     background-size: 200% 200%;
     animation: gradientFlow 8s ease infinite;
   }
   
   .dark .gradient-text {
-     /* Lighter gradient for dark mode */
-     background-image: linear-gradient(to right, #ef4444, #f87171, #d1d5db);
+    /* Light gradient for dark mode: Light Blue -> Bright Red */
+    background-image: linear-gradient(to right, #3b82f6, #ef4444, #fca5a5);
   }
 
   @keyframes gradientFlow {
@@ -149,14 +149,14 @@
     }
   }
 
-  /* Colorful Borders */
+  /* Colorful Borders - Updated for new color scheme */
   .border-glow-red {
-    border: 1px solid rgba(239, 68, 68, 0.3);
+    border: 1px solid rgba(220, 38, 38, 0.3);
     transition: border-color 300ms;
   }
 
   .border-glow-red:hover {
-    border-color: rgba(239, 68, 68, 0.6);
+    border-color: rgba(220, 38, 38, 0.8);
   }
 
   .border-glow-blue {
@@ -165,43 +165,43 @@
   }
 
   .border-glow-blue:hover {
-    border-color: rgba(59, 130, 246, 0.6);
+    border-color: rgba(59, 130, 246, 0.8);
   }
 
   .border-glow-purple {
-    border: 1px solid rgba(168, 85, 247, 0.3);
+    border: 1px solid rgba(30, 64, 175, 0.3);
     transition: border-color 300ms;
   }
 
   .border-glow-purple:hover {
-    border-color: rgba(168, 85, 247, 0.6);
+    border-color: rgba(30, 64, 175, 0.6);
   }
 
   .border-glow-green {
-    border: 1px solid rgba(34, 197, 94, 0.3);
+    border: 1px solid rgba(10, 37, 64, 0.3);
     transition: border-color 300ms;
   }
 
   .border-glow-green:hover {
-    border-color: rgba(34, 197, 94, 0.6);
+    border-color: rgba(10, 37, 64, 0.6);
   }
 
   .border-glow-yellow {
-    border: 1px solid rgba(234, 179, 8, 0.3);
+    border: 1px solid rgba(153, 27, 27, 0.2);
     transition: border-color 300ms;
   }
 
   .border-glow-yellow:hover {
-    border-color: rgba(234, 179, 8, 0.6);
+    border-color: rgba(153, 27, 27, 0.5);
   }
 
   .border-glow-orange {
-    border: 1px solid rgba(249, 115, 22, 0.3);
+    border: 1px solid rgba(59, 130, 246, 0.2);
     transition: border-color 300ms;
   }
 
   .border-glow-orange:hover {
-    border-color: rgba(249, 115, 22, 0.6);
+    border-color: rgba(59, 130, 246, 0.5);
   }
 
   /* Font classes */

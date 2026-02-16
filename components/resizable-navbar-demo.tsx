@@ -62,7 +62,7 @@ export default function NavbarDemo() {
                                 key={`mobile-link-${idx}`}
                                 href={item.link}
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className="relative text-neutral-600 dark:text-neutral-300"
+                                className="relative text-muted-foreground dark:text-muted-foreground/80"
                             >
                                 <span className="block">{item.name}</span>
                             </a>
@@ -99,7 +99,7 @@ const DummyContent = () => {
             <h1 className="mb-4 text-center text-3xl font-bold">
                 Check the navbar at the top of the container
             </h1>
-            <p className="mb-10 text-center text-sm text-zinc-500">
+            <p className="mb-10 text-center text-sm text-muted-foreground">
                 For demo purpose we have kept the position as{" "}
                 <span className="font-medium">Sticky</span>. Keep in mind that this
                 component is <span className="font-medium">fixed</span> and will not
@@ -112,70 +112,70 @@ const DummyContent = () => {
                         title: "The",
                         width: "md:col-span-1",
                         height: "h-60",
-                        bg: "bg-neutral-100 dark:bg-neutral-800",
+                        bg: "bg-blue-50 dark:bg-blue-900/20",
                     },
                     {
                         id: 2,
                         title: "First",
                         width: "md:col-span-2",
                         height: "h-60",
-                        bg: "bg-neutral-100 dark:bg-neutral-800",
+                        bg: "bg-blue-50 dark:bg-blue-900/20",
                     },
                     {
                         id: 3,
                         title: "Rule",
                         width: "md:col-span-1",
                         height: "h-60",
-                        bg: "bg-neutral-100 dark:bg-neutral-800",
+                        bg: "bg-blue-50 dark:bg-blue-900/20",
                     },
                     {
                         id: 4,
                         title: "Of",
                         width: "md:col-span-3",
                         height: "h-60",
-                        bg: "bg-neutral-100 dark:bg-neutral-800",
+                        bg: "bg-blue-50 dark:bg-blue-900/20",
                     },
                     {
                         id: 5,
                         title: "F",
                         width: "md:col-span-1",
                         height: "h-60",
-                        bg: "bg-neutral-100 dark:bg-neutral-800",
+                        bg: "bg-blue-50 dark:bg-blue-900/20",
                     },
                     {
                         id: 6,
                         title: "Club",
                         width: "md:col-span-2",
                         height: "h-60",
-                        bg: "bg-neutral-100 dark:bg-neutral-800",
+                        bg: "bg-blue-50 dark:bg-blue-900/20",
                     },
                     {
                         id: 7,
                         title: "Is",
                         width: "md:col-span-2",
                         height: "h-60",
-                        bg: "bg-neutral-100 dark:bg-neutral-800",
+                        bg: "bg-blue-50 dark:bg-blue-900/20",
                     },
                     {
                         id: 8,
                         title: "You",
                         width: "md:col-span-1",
                         height: "h-60",
-                        bg: "bg-neutral-100 dark:bg-neutral-800",
+                        bg: "bg-blue-50 dark:bg-blue-900/20",
                     },
                     {
                         id: 9,
                         title: "Do NOT TALK about",
                         width: "md:col-span-2",
                         height: "h-60",
-                        bg: "bg-neutral-100 dark:bg-neutral-800",
+                        bg: "bg-blue-50 dark:bg-blue-900/20",
                     },
                     {
                         id: 10,
                         title: "F Club",
                         width: "md:col-span-1",
                         height: "h-60",
-                        bg: "bg-neutral-100 dark:bg-neutral-800",
+                        bg: "bg-blue-50 dark:bg-blue-900/20",
                     },
                 ].map((box) => (
                     <div

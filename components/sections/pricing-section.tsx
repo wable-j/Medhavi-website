@@ -70,7 +70,7 @@ export function PricingSection() {
               <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl">
                 Simple, Transparent Pricing
               </h2>
-              <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70">
+              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70">>
                 Choose the plan that's right for you and start building amazing user interfaces.
               </p>
             </div>
@@ -82,7 +82,7 @@ export function PricingSection() {
             <ScrollReveal key={index} delay={index * 0.1}>
               <Card className={`h-full flex flex-col glassmorphic-card ${plan.popular ? "border-glow-red" : ""}`}>
                 {plan.popular && (
-                  <div className="absolute top-0 right-0 -mt-2 -mr-2 px-3 py-1 bg-red-500 text-white text-xs font-medium rounded-full">
+                  <div className="absolute top-0 right-0 -mt-2 -mr-2 px-3 py-1 bg-red-600 text-white text-xs font-medium rounded-full">
                     Popular
                   </div>
                 )}
@@ -98,7 +98,7 @@ export function PricingSection() {
                   <ul className="space-y-2 mb-8 flex-1">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-center">
-                        <Check className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        <Check className="h-4 w-4 text-blue-600 mr-2 flex-shrink-0" />
                         <span className="text-sm text-muted-foreground">{feature}</span>
                       </li>
                     ))}

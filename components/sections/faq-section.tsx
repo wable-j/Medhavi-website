@@ -63,7 +63,7 @@ export function FaqSection() {
   const visibleFaqs = showAll ? faqs : faqs.slice(0, 4)
 
   return (
-    <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
+    <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-blue-50/40 to-blue-100/30 dark:from-blue-950/20 dark:to-blue-900/20">
       <div className="container px-4 md:px-6">
         <ScrollReveal>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -71,7 +71,7 @@ export function FaqSection() {
               <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl gradient-text">
                 Frequently Asked Questions
               </h2>
-              <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70">
+              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70">>
                 Common questions about transforming your learning experience with Medhavy.
               </p>
             </div>

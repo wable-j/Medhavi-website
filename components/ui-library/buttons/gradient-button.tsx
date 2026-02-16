@@ -21,9 +21,9 @@ export const GradientButton = forwardRef<HTMLButtonElement, GradientButtonProps>
       variant,
       children,
       gradientFrom = "from-red-600",
-      gradientTo = "to-red-900",
+      gradientTo = "to-red-700",
       gradientHoverFrom = "from-red-500",
-      gradientHoverTo = "to-red-800",
+      gradientHoverTo = "to-red-600",
       borderWidth = 0,
       glowAmount = 0,
       ...props

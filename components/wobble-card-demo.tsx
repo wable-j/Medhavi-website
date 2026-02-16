@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 
 export default function WobbleCardDemo() {
     return (
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 overflow-hidden">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-blue-50/40 to-blue-100/30 dark:from-blue-950/20 dark:to-blue-900/20 overflow-hidden">
             <div className="container px-4 md:px-6">
                 <ScrollReveal>
                     <div className="flex flex-col items-center justify-center space-y-6 text-center mb-16">
@@ -22,7 +22,7 @@ export default function WobbleCardDemo() {
                             <AnimatedText
                                 text="Transforming static educational content into intelligent, interactive experiences."
                                 variant="paragraph"
-                                className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
+                                className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70"
                                 animation="fade"
                                 delay={1.0}
                             />
@@ -33,14 +33,14 @@ export default function WobbleCardDemo() {
                 <ScrollReveal delay={1.0}>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
                         <WobbleCard
-                            containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
+                            containerClassName="col-span-1 lg:col-span-2 h-full bg-gradient-to-br from-red-900 to-red-950 min-h-[500px] lg:min-h-[300px]"
                             className=""
                         >
                             <div className="max-w-xs">
                                 <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
                                     Conversational Textbooks Use Natural Language
                                 </h2>
-                                <p className="mt-4 text-left  text-base/6 text-neutral-200">
+                                <p className="mt-4 text-left  text-base/6 text-blue-100">
                                     Students ask questions in natural language and receive answers grounded in your course content—created using conceptual scaffolding principles.
                                 </p>
                             </div>
@@ -60,7 +60,7 @@ export default function WobbleCardDemo() {
                                 Medhavy creates summaries, quizzes, and lecture notes. AI proposes. You dispose. You stay in control.
                             </p>
                         </WobbleCard>
-                        <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-blue-900">
+                        <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-gradient-to-br from-blue-600 to-blue-900">
                             <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
                                 Unified Learning Platform
                             </h2>
@@ -68,12 +68,12 @@ export default function WobbleCardDemo() {
                                 One cohesive experience. Unifies textbooks, PDFs, and LMS content—eliminating platform jumping.
                             </p>
                         </WobbleCard>
-                        <WobbleCard containerClassName="col-span-1 lg:col-span-2 bg-indigo-800 min-h-[300px]">
+                        <WobbleCard containerClassName="col-span-1 lg:col-span-2 bg-gradient-to-br from-blue-600 to-blue-900 min-h-[300px]">
                             <div className="max-w-sm">
                                 <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
                                     Effortless Course Creation
                                 </h2>
-                                <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+                                <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-blue-100">
                                     Imports content, builds LMS modules, and generates assessments. Weeks of prep now takes an afternoon.
                                 </p>
                             </div>

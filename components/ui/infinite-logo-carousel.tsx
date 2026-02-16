@@ -68,7 +68,7 @@ export function InfiniteLogoCarousel() {
                 >
                     {[...universities2, ...universities2, ...universities2, ...universities2].map((uni, idx) => (
                         <div key={idx} className="flex items-center gap-3 group opacity-50 hover:opacity-100 transition-opacity cursor-default">
-                            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-muted/50 text-xs font-bold text-muted-foreground group-hover:bg-purple-500/10 group-hover:text-purple-500 transition-colors border border-transparent group-hover:border-purple-500/20">
+                            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-muted/50 text-xs font-bold text-muted-foreground group-hover:bg-red-500/10 group-hover:text-red-500 transition-colors border border-transparent group-hover:border-red-500/20">
                                 {uni.icon}
                             </div>
                             <span className="text-lg font-semibold text-muted-foreground group-hover:text-foreground transition-colors whitespace-nowrap">

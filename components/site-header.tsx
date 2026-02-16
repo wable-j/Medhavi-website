@@ -46,7 +46,7 @@ export function SiteHeader() {
               href="https://physics-mechanics.medhavi.io/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white border-0 dark:bg-white dark:text-black dark:bg-none hover:from-blue-700 hover:to-cyan-600"
+              className="bg-gradient-to-r from-red-600 to-red-700 text-white border-0 dark:bg-white dark:text-black dark:bg-none hover:from-red-700 hover:to-red-800"
             >
               Sign In
             </NavbarButton>
@@ -84,7 +84,7 @@ export function SiteHeader() {
                   }
                   setIsMobileMenuOpen(false);
                 }}
-                className="relative text-neutral-600 dark:text-neutral-300"
+                className="relative text-muted-foreground dark:text-muted-foreground/80"
               >
                 <span className="block">{item.name}</span>
               </a>
@@ -93,7 +93,7 @@ export function SiteHeader() {
               <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="secondary"
-                className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white border-0 dark:bg-transparent dark:text-white dark:bg-none hover:from-blue-700 hover:to-cyan-600"
+                className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white border-0 dark:bg-transparent dark:text-white dark:bg-none hover:from-red-700 hover:to-red-800"
                 href="#login"
               >
                 Sign in

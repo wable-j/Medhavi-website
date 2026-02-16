@@ -50,7 +50,7 @@ export function TestimonialsSection() {
               <AnimatedText
                 text="Hear from educators and students who use our platform in their classrooms."
                 variant="paragraph"
-                className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
+                className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70"
                 animation="fade"
                 delay={0.3}
               />

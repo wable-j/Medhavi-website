@@ -20,7 +20,7 @@ export function ComponentLibraryShowcase() {
   const [hoveredTab, setHoveredTab] = useState<string | null>(null)
 
   return (
-    <section id="components" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 overflow-hidden">
+    <section id="components" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-blue-50/40 to-blue-100/30 dark:from-blue-950/20 dark:to-blue-900/20 overflow-hidden">
       <div className="container px-6 md:px-8">
         <ScrollReveal>
           <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
@@ -34,7 +34,7 @@ export function ComponentLibraryShowcase() {
               <AnimatedText
                 text="Designed specifically for the unique needs of Science, Technology, Engineering, and Mathematics education."
                 variant="paragraph"
-                className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
+                className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70"
                 animation="fade"
                 delay={0.3}
               />
@@ -124,7 +124,7 @@ export function ComponentLibraryShowcase() {
                         description="Understand heat transfer, entropy, and the laws of thermodynamics through real-world examples."
                         tags={["Energy", "Entropy"]}
                         variant="hover-zoom"
-                        className="border-glow-purple"
+                        className="border-glow-blue"
                       />
                     </ScrollAnimation>
                   </div>
@@ -219,7 +219,7 @@ export function ComponentLibraryShowcase() {
                         description="Master distributions, hypothesis testing, and data analysis through continuous simulation."
                         tags={["Stats", "Data"]}
                         variant="hover-zoom"
-                        className="border-glow-purple"
+                        className="border-glow-blue"
                       />
                     </ScrollAnimation>
                   </div>
@@ -240,7 +240,7 @@ export function ComponentLibraryShowcase() {
                         variant="default"
                         buttonVariant="gradient"
                         icon={<Rocket className="h-6 w-6" />}
-                        className="border-glow-green"
+                        className="border-glow-blue"
                       />
                     </ScrollAnimation>
 
@@ -253,7 +253,7 @@ export function ComponentLibraryShowcase() {
                         alignment="center"
                         buttonVariant="gradient"
                         icon={<Sparkles className="h-6 w-6" />}
-                        className="border-glow-yellow"
+                        className="border-glow-blue"
                       />
                     </ScrollAnimation>
 
@@ -266,7 +266,7 @@ export function ComponentLibraryShowcase() {
                         alignment="right"
                         buttonVariant="gradient"
                         icon={<Lightbulb className="h-6 w-6" />}
-                        className="border-glow-orange"
+                        className="border-glow-red"
                       />
                     </ScrollAnimation>
                   </div>
@@ -314,7 +314,7 @@ export function ComponentLibraryShowcase() {
                         description="Visualize flow rates, pressure drops, and turbulence in pipe systems and aerodynamics."
                         tags={["Fluids", "Aerodynamics"]}
                         variant="hover-zoom"
-                        className="border-glow-purple"
+                        className="border-glow-blue"
                       />
                     </ScrollAnimation>
                   </div>
@@ -335,7 +335,7 @@ export function ComponentLibraryShowcase() {
                         variant="default"
                         buttonVariant="gradient"
                         icon={<Rocket className="h-6 w-6" />}
-                        className="border-glow-green"
+                        className="border-glow-blue"
                       />
                     </ScrollAnimation>
 
@@ -348,7 +348,7 @@ export function ComponentLibraryShowcase() {
                         alignment="center"
                         buttonVariant="gradient"
                         icon={<Sparkles className="h-6 w-6" />}
-                        className="border-glow-yellow"
+                        className="border-glow-blue"
                       />
                     </ScrollAnimation>
 
@@ -361,7 +361,7 @@ export function ComponentLibraryShowcase() {
                         alignment="right"
                         buttonVariant="gradient"
                         icon={<Lightbulb className="h-6 w-6" />}
-                        className="border-glow-orange"
+                        className="border-glow-red"
                       />
                     </ScrollAnimation>
                   </div>
@@ -416,7 +416,7 @@ export function ComponentLibraryShowcase() {
                               <GradientButton>Gradient</GradientButton>
                             </StaggerItem>
                             <StaggerItem>
-                              <GradientButton gradientFrom="from-blue-500" gradientTo="to-purple-600" glowAmount={4}>
+                              <GradientButton gradientFrom="from-blue-600" gradientTo="to-red-600" glowAmount={4}>
                                 With Glow
                               </GradientButton>
                             </StaggerItem>
@@ -426,7 +426,7 @@ export function ComponentLibraryShowcase() {
                     </ScrollAnimation>
 
                     <ScrollAnimation type="slide" direction="up" delay={0.3}>
-                      <div className="p-6 rounded-xl border glassmorphic-card border-glow-purple">
+                      <div className="p-6 rounded-xl border glassmorphic-card border-glow-blue">
                         <h4 className="text-lg font-medium mb-6">Interactive Buttons</h4>
                         <div className="flex flex-wrap gap-6">
                           <StaggerContainer>
@@ -444,7 +444,7 @@ export function ComponentLibraryShowcase() {
                     </ScrollAnimation>
 
                     <ScrollAnimation type="slide" direction="up" delay={0.4}>
-                      <div className="p-6 rounded-xl border glassmorphic-card border-glow-green">
+                      <div className="p-6 rounded-xl border glassmorphic-card border-glow-blue">
                         <h4 className="text-lg font-medium mb-6">States & Variations</h4>
                         <div className="flex flex-wrap gap-6">
                           <StaggerContainer>

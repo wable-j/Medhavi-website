@@ -11,7 +11,7 @@ import { OutlineButton } from "@/components/ui-library/buttons/button-variants"
 
 export function CtaSection() {
   return (
-    <section id="cta" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-red-950/30 to-gray-950/30">
+    <section id="cta" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-red-950/30 to-blue-950/30">
       <div className="container px-6 md:px-8">
         <ScrollReveal>
           <div className="flex flex-col items-center justify-center space-y-6 text-center">
@@ -26,7 +26,7 @@ export function CtaSection() {
               <AnimatedText
                 text="Medhavy turns textbooks into AI-curated, conversational courses inside any LTI-compliant LMS reducing faculty workload and giving students effortless access to knowledge."
                 variant="paragraph"
-                className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
+                className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70"
                 animation="fade"
                 delay={0.3}
               />

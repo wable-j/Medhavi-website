@@ -28,7 +28,7 @@ export function ComponentShowcase() {
               <AnimatedText
                 text="Browse our collection of beautifully designed components for your next project."
                 variant="paragraph"
-                className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
+                className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70"
                 animation="fade"
                 delay={0.3}
               />
@@ -166,7 +166,7 @@ export function ComponentShowcase() {
                       </p>
                     </TiltCard>
 
-                    <TiltCard className="p-6 border rounded-lg glassmorphic-card bg-gradient-to-br from-red-900/20 to-gray-900/20 group">
+                    <TiltCard className="p-6 border rounded-lg glassmorphic-card bg-gradient-to-br from-red-900/20 to-blue-900/20 group">
                       <h3 className="text-lg font-medium mb-2 tracking-tight group-hover:text-red-500 transition-colors">
                         Gradient Card
                       </h3>

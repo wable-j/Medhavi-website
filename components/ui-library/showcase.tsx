@@ -273,10 +273,10 @@ export function ComponentShowcase() {
                   </StaggerItem>
                   <StaggerItem>
                     <GradientButton
-                      gradientFrom="from-blue-500"
-                      gradientTo="to-purple-600"
-                      gradientHoverFrom="from-blue-600"
-                      gradientHoverTo="to-purple-700"
+                      gradientFrom="from-blue-600"
+                      gradientTo="to-red-600"
+                      gradientHoverFrom="from-blue-700"
+                      gradientHoverTo="to-red-700"
                     >
                       Custom Colors
                     </GradientButton>

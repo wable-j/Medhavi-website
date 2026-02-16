@@ -26,32 +26,32 @@ export function FeaturesSection() {
       borderClass: "border-glow-blue",
     },
     {
-      icon: <Clock className="h-10 w-10 text-yellow-500" />,
+      icon: <Clock className="h-10 w-10 text-blue-500" />,
       title: "Effortless Course Prep",
       description: "Reduce course preparation time from weeks to hours using automated content ingestion.",
       progress: 90,
-      borderClass: "border-glow-yellow",
+      borderClass: "border-glow-blue",
     },
     {
-      icon: <Users className="h-10 w-10 text-green-500" />,
+      icon: <Users className="h-10 w-10 text-blue-500" />,
       title: "AI Co-Instructor",
       description: "Your digital teaching assistant that drafts quizzes, summaries, and lecture notes for your review.",
       progress: 95,
-      borderClass: "border-glow-green",
+      borderClass: "border-glow-blue",
     },
     {
-      icon: <BarChart className="h-10 w-10 text-purple-500" />,
+      icon: <BarChart className="h-10 w-10 text-blue-500" />,
       title: "Actionable Analytics",
       description: "Real-time insights into student engagement, question patterns, and learning gaps.",
       progress: 92,
-      borderClass: "border-glow-purple",
+      borderClass: "border-glow-blue",
     },
     {
-      icon: <ShieldCheck className="h-10 w-10 text-orange-500" />,
+      icon: <ShieldCheck className="h-10 w-10 text-red-500" />,
       title: "Enterprise Secure",
       description: "FERPA compliant and LTI 1.3 integrated, delivering secure, scalable, and institution-ready performance.",
       progress: 100,
-      borderClass: "border-glow-orange",
+      borderClass: "border-glow-red",
     },
   ]
 
@@ -72,7 +72,7 @@ export function FeaturesSection() {
               <AnimatedText
                 text="Why leading institutions and educators are switching to Medhavy's AI-powered intelligent textbook system."
                 variant="paragraph"
-                className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
+                className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70"
                 animation="fade"
                 delay={0.5}
               />
@@ -109,7 +109,7 @@ export function FeaturesSection() {
                         status={feature.progress === 100 ? "success" : "default"}
                         showPercentage
                         variant="minimal"
-                        progressColor={feature.progress === 100 ? "bg-green-500" : "bg-red-500"}
+                        progressColor={feature.progress === 100 ? "bg-blue-600" : "bg-red-600"}
                         animationDuration={2.5}
                       />
                     </CardContent>

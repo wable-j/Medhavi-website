@@ -54,11 +54,11 @@ export function DemoRequestModal({ isOpen, onClose }: DemoRequestModalProps) {
                         className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-white dark:bg-black border border-white/20 dark:border-white/10 shadow-2xl"
                     >
                         {/* Glassmorphic Background Effect */}
-                        <div className="absolute inset-0 z-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 pointer-events-none" />
+                        <div className="absolute inset-0 z-0 bg-gradient-to-br from-blue-500/5 via-transparent to-red-500/5 pointer-events-none" />
 
                         {/* Header */}
                         <div className="relative z-10 flex items-center justify-between px-6 py-4 border-b border-border/10">
-                            <h2 className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+                            <h2 className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-red-600 dark:from-blue-400 dark:to-red-400">
                                 Request a Demo
                             </h2>
                             <button
@@ -73,8 +73,8 @@ export function DemoRequestModal({ isOpen, onClose }: DemoRequestModalProps) {
                         <div className="relative z-10 p-6">
                             {isSuccess ? (
                                 <div className="flex flex-col items-center justify-center py-8 text-center space-y-4">
-                                    <div className="p-3 bg-green-100 dark:bg-green-900/30 rounded-full">
-                                        <Check className="w-8 h-8 text-green-600 dark:text-green-400" />
+                                    <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-full">
+                                        <Check className="w-8 h-8 text-blue-600 dark:text-blue-400" />
                                     </div>
                                     <h3 className="text-xl font-medium">Request Sent!</h3>
                                     <p className="text-muted-foreground">
@@ -140,10 +140,10 @@ export function DemoRequestModal({ isOpen, onClose }: DemoRequestModalProps) {
                                             type="submit"
                                             disabled={isSubmitting}
                                             className="w-full h-11"
-                                            gradientFrom="from-blue-600"
-                                            gradientTo="to-purple-600"
-                                            gradientHoverFrom="from-blue-500"
-                                            gradientHoverTo="to-purple-500"
+                                            gradientFrom="from-red-600"
+                                            gradientTo="to-red-700"
+                                            gradientHoverFrom="from-red-500"
+                                            gradientHoverTo="to-red-600"
                                         >
                                             {isSubmitting ? (
                                                 <div className="flex items-center gap-2">
