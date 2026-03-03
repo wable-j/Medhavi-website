@@ -32,7 +32,7 @@ export function ComponentLibraryShowcase() {
                 animation="slide"
               />
               <AnimatedText
-                text="Designed specifically for the unique needs of Science, Technology, Engineering, and Mathematics education."
+                text="Designed specifically for the unique needs of Science, Technology, Cancer, and Mathematics education."
                 variant="paragraph"
                 className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70"
                 animation="fade"
@@ -75,7 +75,7 @@ export function ComponentLibraryShowcase() {
                             ? "Physics"
                             : tab === "buttons"
                               ? "Mathematics"
-                              : "Engineering"}
+                              : "Cancer"}
                         </span>
                       </TabsTrigger>
                     ))}
@@ -273,12 +273,12 @@ export function ComponentLibraryShowcase() {
                 </div>
               </TabsContent>
 
-              {/* Engineering Tab */}
+              {/* Cancer Tab */}
               <TabsContent value="progress" className="space-y-12">
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-medium tracking-tight text-center">Interactive Engineering Modules</h3>
+                  <h3 className="text-2xl font-medium tracking-tight text-center">Interactive Cancer Modules</h3>
                   <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-                    complex engineering concepts visualized and explained through interactive AI tutoring
+                    complex Cancer concepts visualized and explained through interactive AI tutoring
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -297,8 +297,8 @@ export function ComponentLibraryShowcase() {
                     <ScrollAnimation type="slide" direction="up" delay={0.2}>
                       <ImageCard
                         imageSrc="/showcase/sound.png"
-                        imageAlt="Structural Engineering"
-                        title="Structural Engineering"
+                        imageAlt="Structural Cancer"
+                        title="Structural Cancer"
                         description="Test load distributions and stress factors on bridges and buildings using interactive 3D models."
                         tags={["Statics", "Materials"]}
                         variant="hover-zoom"

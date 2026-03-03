@@ -46,14 +46,16 @@ export function SiteFooter() {
                     Features
                   </Link>
                 </li>
-                <li>
-                  <Link
+
+                {/*<li>
+                   <Link
                     href="#pricing"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
                     Pricing
-                  </Link>
-                </li>
+                  </Link> 
+                  </li>*/}
+
                 <li>
                   <Link
                     href="#components"
@@ -83,14 +85,14 @@ export function SiteFooter() {
                     About
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="#blog"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
                     Blog
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     href="#careers"
@@ -109,7 +111,7 @@ export function SiteFooter() {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-2">
+            {/* <div className="flex flex-col gap-2">
               <h3 className="text-sm font-medium tracking-tight">Legal</h3>
               <ul className="flex flex-col gap-2">
                 <li>
@@ -145,7 +147,7 @@ export function SiteFooter() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="border-t border-border/40" />

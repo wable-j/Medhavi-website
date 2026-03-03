@@ -18,10 +18,10 @@ export default function NavbarDemo() {
             name: "Features",
             link: "#features",
         },
-        {
-            name: "Pricing",
-            link: "#pricing",
-        },
+        // {
+        //     name: "Pricing",
+        //     link: "#pricing",
+        // },
         {
             name: "Contact",
             link: "#contact",
