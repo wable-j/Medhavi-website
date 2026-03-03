@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { PageTransition } from "@/components/page-transition"
+import { Analytics } from "@vercel/analytics/next"
 
 import "@/app/globals.css"
 import { Suspense } from "react"
@@ -57,6 +58,7 @@ export default function RootLayout({
             <SiteFooter />
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
