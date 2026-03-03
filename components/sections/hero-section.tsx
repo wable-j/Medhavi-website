@@ -150,10 +150,10 @@ export function HeroSection() {
             </SpotlightCard>
           </ScrollReveal>
         </div>
-
-        <div className="mt-20">
+        {/* infinite logo carousel */}
+        {/* <div className="mt-20">
           <InfiniteLogoCarousel />
-        </div>
+        </div> */}
       </div>
       <DemoRequestModal isOpen={isDemoModalOpen} onClose={() => setIsDemoModalOpen(false)} />
     </section>
