@@ -10,7 +10,7 @@
     --card-foreground: 210 73% 14%;
     --popover: 0 0% 100%;
     --popover-foreground: 210 73% 14%;
-    --primary: 0 71% 50%; /* Bright red for CTAs and highlights */
+    --primary: 0 84% 40%; /* Deep red for CTAs and highlights */
     --primary-foreground: 0 0% 100%;
     --secondary: 217 92% 60%; /* Light blue for secondary elements */
     --secondary-foreground: 210 73% 14%;
@@ -18,11 +18,11 @@
     --muted-foreground: 210 73% 14%; /* Dark navy text */
     --accent: 221 71% 40%; /* Medium blue for accents */
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 70% 35%; /* Dark red for destructive actions */
+    --destructive: 0 84% 40%; /* Deep red for destructive actions */
     --destructive-foreground: 0 0% 100%;
     --border: 220 40% 88%; /* Light blue border */
     --input: 220 40% 88%; /* Light blue input background */
-    --ring: 0 71% 50%; /* Bright red focus ring */
+    --ring: 0 84% 40%; /* Deep red focus ring */
     --radius: 0.75rem;
   }
 
@@ -33,7 +33,7 @@
     --card-foreground: 0 0% 95%;
     --popover: 210 30% 12%;
     --popover-foreground: 0 0% 95%;
-    --primary: 0 71% 50%; /* Bright red for CTAs */
+    --primary: 0 84% 40%; /* Deep red for CTAs */
     --primary-foreground: 210 40% 6%;
     --secondary: 217 92% 60%; /* Light blue */
     --secondary-foreground: 210 40% 6%;
@@ -41,11 +41,11 @@
     --muted-foreground: 0 0% 70%;
     --accent: 221 71% 40%; /* Medium blue */
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 70% 50%; /* Bright red destructive */
+    --destructive: 0 84% 40%; /* Deep red destructive */
     --destructive-foreground: 210 40% 6%;
     --border: 210 30% 20%; /* Dark blue border */
     --input: 210 30% 20%; /* Dark input background */
-    --ring: 0 71% 50%; /* Bright red focus ring */
+    --ring: 0 84% 40%; /* Deep red focus ring */
   }
 }
 
