@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Montserrat } from "next/font/google"
+import { EB_Garamond } from "next/font/google"
 
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -12,16 +12,10 @@ import "@/app/globals.css"
 import { Suspense } from "react"
 
 // Use only Google Fonts to avoid any local font references
-const fontSans = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  weight: ["300", "400", "500", "600"],
-})
-
-const fontHeading = Montserrat({
+const fontHeading = EB_Garamond({
   subsets: ["latin"],
   variable: "--font-heading",
-  weight: ["600", "700"],
+  weight: ["400"],
 })
 
 export const metadata: Metadata = {
@@ -42,7 +36,6 @@ export default function RootLayout({
         suppressHydrationWarning
         className={cn(
           "min-h-screen bg-background font-sans antialiased font-light",
-          fontSans.variable,
           fontHeading.variable,
         )}
       >

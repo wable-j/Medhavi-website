@@ -20,7 +20,7 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)"],
+        sans: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
         heading: ["var(--font-heading)"],
       },
       colors: {
