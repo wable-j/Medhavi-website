@@ -77,14 +77,14 @@ export function DemoRequestModal({ isOpen, onClose }: DemoRequestModalProps) {
                                         <Check className="w-8 h-8 text-blue-600 dark:text-blue-400" />
                                     </div>
                                     <h3 className="text-xl font-medium">Request Sent!</h3>
-                                    <p className="text-muted-foreground">
+                                    <p className="text-foreground">
                                         We've received your request and will get back to you shortly.
                                     </p>
                                 </div>
                             ) : (
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     <div className="space-y-2">
-                                        <label htmlFor="name" className="text-sm font-medium text-muted-foreground">
+                                        <label htmlFor="name" className="text-base font-medium text-foreground">
                                             Full Name
                                         </label>
                                         <input
@@ -98,7 +98,7 @@ export function DemoRequestModal({ isOpen, onClose }: DemoRequestModalProps) {
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <div className="space-y-2">
-                                            <label htmlFor="email" className="text-sm font-medium text-muted-foreground">
+                                            <label htmlFor="email" className="text-base font-medium text-foreground">
                                                 Work Email
                                             </label>
                                             <input
@@ -110,7 +110,7 @@ export function DemoRequestModal({ isOpen, onClose }: DemoRequestModalProps) {
                                             />
                                         </div>
                                         <div className="space-y-2">
-                                            <label htmlFor="org" className="text-sm font-medium text-muted-foreground">
+                                            <label htmlFor="org" className="text-base font-medium text-foreground">
                                                 Institution
                                             </label>
                                             <input
@@ -124,7 +124,7 @@ export function DemoRequestModal({ isOpen, onClose }: DemoRequestModalProps) {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <label htmlFor="message" className="text-sm font-medium text-muted-foreground">
+                                        <label htmlFor="message" className="text-base font-medium text-foreground">
                                             Message (Optional)
                                         </label>
                                         <textarea

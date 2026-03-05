@@ -50,7 +50,7 @@ export function TestimonialsSection() {
               <AnimatedText
                 text="Hear from educators and students who use our platform in their classrooms."
                 variant="paragraph"
-                className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70"
+                className="max-w-[900px] text-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
                 animation="fade"
                 delay={0.3}
               />
@@ -85,12 +85,12 @@ export function TestimonialsSection() {
                         <h3 className="text-lg font-medium tracking-tight group-hover:text-red-500 transition-colors">
                           {testimonial.name}
                         </h3>
-                        <p className="text-sm text-muted-foreground opacity-70">{testimonial.role}</p>
+                        <p className="text-base text-foreground">{testimonial.role}</p>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground opacity-70 group-hover:opacity-100 transition-opacity">
+                    <p className="text-foreground group-hover:opacity-100 transition-opacity">
                       {testimonial.content}
                     </p>
                   </CardContent>

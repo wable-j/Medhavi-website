@@ -34,7 +34,7 @@ export function ComponentLibraryShowcase() {
               <AnimatedText
                 text="Designed specifically for the unique needs of Science, Technology, Engineering, and Mathematics education."
                 variant="paragraph"
-                className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70"
+                className="max-w-[900px] text-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
                 animation="fade"
                 delay={0.3}
               />
@@ -87,7 +87,7 @@ export function ComponentLibraryShowcase() {
               <TabsContent value="cards" className="space-y-12">
                 <div className="space-y-4">
                   <h3 className="text-2xl font-medium tracking-tight text-center">Interactive Physics Modules</h3>
-                  <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+                  <p className="text-foreground text-center max-w-3xl mx-auto mb-8">
                     complex physical concepts visualized and explained through interactive AI tutoring
                   </p>
 
@@ -132,7 +132,7 @@ export function ComponentLibraryShowcase() {
 
                 <div className="space-y-4 pt-8">
                   <h3 className="text-2xl font-medium tracking-tight text-center">Student Engagement</h3>
-                  <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+                  <p className="text-foreground text-center max-w-3xl mx-auto mb-8">
                     Tools that keep students motivated and on track with their learning goals.
                   </p>
 
@@ -182,7 +182,7 @@ export function ComponentLibraryShowcase() {
               <TabsContent value="buttons" className="space-y-12">
                 <div className="space-y-4">
                   <h3 className="text-2xl font-medium tracking-tight text-center">Interactive Mathematics Modules</h3>
-                  <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+                  <p className="text-foreground text-center max-w-3xl mx-auto mb-8">
                     complex mathematical concepts visualized and explained through interactive AI tutoring
                   </p>
 
@@ -227,7 +227,7 @@ export function ComponentLibraryShowcase() {
 
                 <div className="space-y-4 pt-8">
                   <h3 className="text-2xl font-medium tracking-tight text-center">Student Engagement</h3>
-                  <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+                  <p className="text-foreground text-center max-w-3xl mx-auto mb-8">
                     Tools that keep students motivated and on track with their learning goals.
                   </p>
 
@@ -277,7 +277,7 @@ export function ComponentLibraryShowcase() {
               <TabsContent value="progress" className="space-y-12">
                 <div className="space-y-4">
                   <h3 className="text-2xl font-medium tracking-tight text-center">Interactive Engineering Modules</h3>
-                  <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+                  <p className="text-foreground text-center max-w-3xl mx-auto mb-8">
                     complex engineering concepts visualized and explained through interactive AI tutoring
                   </p>
 
@@ -322,7 +322,7 @@ export function ComponentLibraryShowcase() {
 
                 <div className="space-y-4 pt-8">
                   <h3 className="text-2xl font-medium tracking-tight text-center">Student Engagement</h3>
-                  <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+                  <p className="text-foreground text-center max-w-3xl mx-auto mb-8">
                     Tools that keep students motivated and on track with their learning goals.
                   </p>
 
@@ -372,7 +372,7 @@ export function ComponentLibraryShowcase() {
               {/* <TabsContent value="buttons" className="space-y-12">
                 <div className="space-y-4">
                   <h3 className="text-2xl font-medium tracking-tight text-center">Button Styles</h3>
-                  <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+                  <p className="text-foreground text-center max-w-3xl mx-auto mb-8">
                     A comprehensive collection of button styles for every use case
                   </p>
 
@@ -474,7 +474,7 @@ export function ComponentLibraryShowcase() {
               {/* <TabsContent value="progress" className="space-y-12">
                 <div className="space-y-4">
                   <h3 className="text-2xl font-medium tracking-tight text-center">Progress Cards</h3>
-                  <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+                  <p className="text-foreground text-center max-w-3xl mx-auto mb-8">
                     Visualize progress, completion status, and metrics with these interactive cards
                   </p>
 

@@ -32,7 +32,7 @@ export function SiteHeader() {
       <Navbar className="top-4">
         {/* Desktop Navigation */}
         <NavBody>
-          <Link href="/" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
+          <Link href="/" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-base font-normal text-black">
             <Icons.logo className="h-6 w-6 fill-black dark:fill-white" />
             <span className="font-medium text-black dark:text-white">Medhavy</span>
           </Link>
@@ -46,7 +46,7 @@ export function SiteHeader() {
               href="https://physics-mechanics.medhavi.io/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-red-600 to-red-700 text-white border-0 dark:bg-white dark:text-black dark:bg-none hover:from-red-700 hover:to-red-800"
+              className="bg-gradient-to-r from-red-600 to-red-700 !text-white border-0 dark:bg-white dark:text-black dark:bg-none hover:from-red-700 hover:to-red-800 hover:!text-white"
             >
               Sign In
             </NavbarButton>
@@ -56,7 +56,7 @@ export function SiteHeader() {
         {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader>
-            <Link href="/" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
+            <Link href="/" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-base font-normal text-black">
               <Icons.logo className="h-6 w-6 fill-black dark:fill-white" />
               <span className="font-medium text-black dark:text-white">Medhavy</span>
             </Link>
@@ -84,7 +84,7 @@ export function SiteHeader() {
                   }
                   setIsMobileMenuOpen(false);
                 }}
-                className="relative text-muted-foreground dark:text-muted-foreground/80"
+                className="relative text-base text-foreground dark:text-foreground/80"
               >
                 <span className="block">{item.name}</span>
               </a>
@@ -93,7 +93,7 @@ export function SiteHeader() {
               <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="secondary"
-                className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white border-0 dark:bg-transparent dark:text-white dark:bg-none hover:from-red-700 hover:to-red-800"
+                className="w-full bg-gradient-to-r from-red-600 to-red-700 !text-white border-0 dark:bg-transparent dark:text-white dark:bg-none hover:from-red-700 hover:to-red-800 hover:!text-white"
                 href="#login"
               >
                 Sign in

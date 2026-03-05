@@ -30,7 +30,7 @@ export function ComponentShowcase() {
           <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl">UI Component Library</h2>
         </ScrollAnimation>
         <ScrollAnimation type="fade" direction="up" delay={0.2}>
-          <p className="text-muted-foreground max-w-[800px] mx-auto">
+          <p className="text-foreground max-w-[800px] mx-auto">
             A comprehensive collection of interactive components with consistent design and smooth animations.
           </p>
         </ScrollAnimation>
@@ -321,7 +321,7 @@ export function ComponentShowcase() {
                     <CardDescription>Simple fade-in effect on scroll</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">This element fades in when it enters the viewport.</p>
+                    <p className="text-foreground">This element fades in when it enters the viewport.</p>
                   </CardContent>
                 </Card>
               </ScrollAnimation>
@@ -333,7 +333,7 @@ export function ComponentShowcase() {
                     <CardDescription>Elements slide up as they enter the viewport</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">This element slides up when it enters the viewport.</p>
+                    <p className="text-foreground">This element slides up when it enters the viewport.</p>
                   </CardContent>
                 </Card>
               </ScrollAnimation>
@@ -345,7 +345,7 @@ export function ComponentShowcase() {
                     <CardDescription>Elements slide in from the right</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">
+                    <p className="text-foreground">
                       This element slides in from the right when it enters the viewport.
                     </p>
                   </CardContent>
@@ -359,7 +359,7 @@ export function ComponentShowcase() {
                     <CardDescription>Elements scale up as they enter the viewport</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">This element scales up when it enters the viewport.</p>
+                    <p className="text-foreground">This element scales up when it enters the viewport.</p>
                   </CardContent>
                 </Card>
               </ScrollAnimation>
@@ -375,7 +375,7 @@ export function ComponentShowcase() {
                       <CardTitle>Item {item}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground">This item appears with a staggered delay.</p>
+                      <p className="text-foreground">This item appears with a staggered delay.</p>
                     </CardContent>
                   </Card>
                 </StaggerItem>
@@ -392,7 +392,7 @@ export function ComponentShowcase() {
                     <CardDescription>This card moves slower than the scroll speed</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">
+                    <p className="text-foreground">
                       Parallax effects create depth by moving elements at different speeds relative to the scroll
                       position.
                     </p>
@@ -407,7 +407,7 @@ export function ComponentShowcase() {
                     <CardDescription>This card moves in the opposite direction</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">
+                    <p className="text-foreground">
                       Reverse parallax creates an interesting effect by moving elements in the opposite direction of the
                       scroll.
                     </p>

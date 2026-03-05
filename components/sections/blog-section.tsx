@@ -33,7 +33,7 @@ export function BlogSection() {
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl">Latest Articles</h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70">
+              <p className="max-w-[900px] text-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Stay updated with our latest insights, tutorials, and best practices.
               </p>
             </div>
@@ -51,12 +51,12 @@ export function BlogSection() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground opacity-70">{post.description}</p>
+                  <p className="text-foreground opacity-70">{post.description}</p>
                 </CardContent>
                 <CardFooter>
                   <Link
                     href="#"
-                    className="inline-flex items-center text-sm text-primary hover:underline transition-colors"
+                    className="inline-flex items-center text-base text-primary hover:underline transition-colors"
                   >
                     Read more
                     <ArrowRight className="ml-1 h-4 w-4" />

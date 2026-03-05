@@ -12,7 +12,7 @@ export function SiteFooter() {
               <Icons.logo className="h-6 w-6" />
               <span className="font-heading text-xl tracking-tight">Medhavi</span>
             </Link>
-            <p className="text-muted-foreground max-w-sm opacity-70">
+            <p className="text-foreground max-w-sm text-base">
               Medhavy turns textbooks into AI-curated, conversational courses inside any LTI-compliant LMS—reducing
               faculty workload, unifying fragmented content, and giving students effortless access to knowledge.
               <br />
@@ -36,12 +36,12 @@ export function SiteFooter() {
           </div>
           <div className="grid flex-1 grid-cols-2 gap-10 sm:grid-cols-3">
             <div className="flex flex-col gap-2">
-              <h3 className="text-sm font-medium tracking-tight">Product</h3>
+              <h3 className="text-base font-medium tracking-tight">Product</h3>
               <ul className="flex flex-col gap-2">
                 <li>
                   <Link
                     href="#features"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                    className="text-base text-foreground transition-colors hover:text-foreground"
                   >
                     Features
                   </Link>
@@ -49,7 +49,7 @@ export function SiteFooter() {
                 <li>
                   <Link
                     href="#pricing"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                    className="text-base text-foreground transition-colors hover:text-foreground"
                   >
                     Pricing
                   </Link>
@@ -57,7 +57,7 @@ export function SiteFooter() {
                 <li>
                   <Link
                     href="#components"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                    className="text-base text-foreground transition-colors hover:text-foreground"
                   >
                     Components
                   </Link>
@@ -65,7 +65,7 @@ export function SiteFooter() {
                 <li>
                   <Link
                     href="#changelog"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                    className="text-base text-foreground transition-colors hover:text-foreground"
                   >
                     Changelog
                   </Link>
@@ -73,12 +73,12 @@ export function SiteFooter() {
               </ul>
             </div>
             <div className="flex flex-col gap-2">
-              <h3 className="text-sm font-medium tracking-tight">Company</h3>
+              <h3 className="text-base font-medium tracking-tight">Company</h3>
               <ul className="flex flex-col gap-2">
                 <li>
                   <Link
                     href="#about"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                    className="text-base text-foreground transition-colors hover:text-foreground"
                   >
                     About
                   </Link>
@@ -86,7 +86,7 @@ export function SiteFooter() {
                 <li>
                   <Link
                     href="#blog"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                    className="text-base text-foreground transition-colors hover:text-foreground"
                   >
                     Blog
                   </Link>
@@ -94,7 +94,7 @@ export function SiteFooter() {
                 <li>
                   <Link
                     href="#careers"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                    className="text-base text-foreground transition-colors hover:text-foreground"
                   >
                     Careers
                   </Link>
@@ -102,7 +102,7 @@ export function SiteFooter() {
                 <li>
                   <Link
                     href="#contact"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                    className="text-base text-foreground transition-colors hover:text-foreground"
                   >
                     Contact
                   </Link>
@@ -110,12 +110,12 @@ export function SiteFooter() {
               </ul>
             </div>
             <div className="flex flex-col gap-2">
-              <h3 className="text-sm font-medium tracking-tight">Legal</h3>
+              <h3 className="text-base font-medium tracking-tight">Legal</h3>
               <ul className="flex flex-col gap-2">
                 <li>
                   <Link
                     href="#privacy"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                    className="text-base text-foreground transition-colors hover:text-foreground"
                   >
                     Privacy
                   </Link>
@@ -123,7 +123,7 @@ export function SiteFooter() {
                 <li>
                   <Link
                     href="#terms"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                    className="text-base text-foreground transition-colors hover:text-foreground"
                   >
                     Terms
                   </Link>
@@ -131,7 +131,7 @@ export function SiteFooter() {
                 <li>
                   <Link
                     href="#cookies"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                    className="text-base text-foreground transition-colors hover:text-foreground"
                   >
                     Cookies
                   </Link>
@@ -139,7 +139,7 @@ export function SiteFooter() {
                 <li>
                   <Link
                     href="#licenses"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                    className="text-base text-foreground transition-colors hover:text-foreground"
                   >
                     Licenses
                   </Link>
@@ -150,19 +150,19 @@ export function SiteFooter() {
         </div>
         <div className="border-t border-border/40" />
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <p className="text-sm text-muted-foreground opacity-70">
+          <p className="text-base text-foreground">
             &copy; {new Date().getFullYear()} Medhavi. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link
               href="#terms"
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+              className="text-base text-foreground transition-colors hover:text-foreground"
             >
               Terms
             </Link>
             <Link
               href="#privacy"
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+              className="text-base text-foreground transition-colors hover:text-foreground"
             >
               Privacy
             </Link>

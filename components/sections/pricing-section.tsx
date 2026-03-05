@@ -70,7 +70,7 @@ export function PricingSection() {
               <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl">
                 Simple, Transparent Pricing
               </h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70">>
+              <p className="max-w-[900px] text-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">>
                 Choose the plan that's right for you and start building amazing user interfaces.
               </p>
             </div>
@@ -91,7 +91,7 @@ export function PricingSection() {
                   <CardDescription className="opacity-70">{plan.description}</CardDescription>
                   <div className="mt-4">
                     <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className="text-muted-foreground ml-2 opacity-70">{plan.duration}</span>
+                    <span className="text-foreground ml-2">{plan.duration}</span>
                   </div>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col">
@@ -99,7 +99,7 @@ export function PricingSection() {
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-center">
                         <Check className="h-4 w-4 text-blue-600 mr-2 flex-shrink-0" />
-                        <span className="text-sm text-muted-foreground">{feature}</span>
+                        <span className="text-base text-foreground">{feature}</span>
                       </li>
                     ))}
                   </ul>

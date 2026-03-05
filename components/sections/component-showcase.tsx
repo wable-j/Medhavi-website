@@ -28,7 +28,7 @@ export function ComponentShowcase() {
               <AnimatedText
                 text="Browse our collection of beautifully designed components for your next project."
                 variant="paragraph"
-                className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70"
+                className="max-w-[900px] text-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
                 animation="fade"
                 delay={0.3}
               />
@@ -161,7 +161,7 @@ export function ComponentShowcase() {
                       <h3 className="text-lg font-medium mb-2 tracking-tight group-hover:text-red-500 transition-colors">
                         3D Tilt Card
                       </h3>
-                      <p className="text-muted-foreground opacity-70 group-hover:opacity-100 transition-opacity">
+                      <p className="text-foreground group-hover:opacity-100 transition-opacity">
                         Interactive card with 3D tilt effect on hover.
                       </p>
                     </TiltCard>
@@ -170,7 +170,7 @@ export function ComponentShowcase() {
                       <h3 className="text-lg font-medium mb-2 tracking-tight group-hover:text-red-500 transition-colors">
                         Gradient Card
                       </h3>
-                      <p className="text-muted-foreground opacity-70 group-hover:opacity-100 transition-opacity">
+                      <p className="text-foreground group-hover:opacity-100 transition-opacity">
                         Card with gradient background and tilt effect.
                       </p>
                     </TiltCard>
@@ -179,7 +179,7 @@ export function ComponentShowcase() {
                       <h3 className="text-lg font-medium mb-2 tracking-tight group-hover:text-red-500 transition-colors">
                         Muted Card
                       </h3>
-                      <p className="text-muted-foreground opacity-70 group-hover:opacity-100 transition-opacity">
+                      <p className="text-foreground group-hover:opacity-100 transition-opacity">
                         Subtle background with interactive tilt effect.
                       </p>
                     </TiltCard>

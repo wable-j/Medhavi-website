@@ -116,7 +116,7 @@ export function CtaCard({
       )}
 
       <h3 className="text-xl font-semibold tracking-tight mb-2">{title}</h3>
-      <p className="text-muted-foreground mb-6">{description}</p>
+      <p className="text-foreground mb-6">{description}</p>
 
       <div className={cn("flex gap-3 mt-auto", alignment === "center" && "justify-center")}>
         {renderButton()}

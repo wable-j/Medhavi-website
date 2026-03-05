@@ -54,31 +54,31 @@ export function HeroSection() {
               animate="visible"
             >
               <motion.div className="space-y-4" variants={itemVariants}>
-                <div className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground bg-muted/80 px-4 py-2 rounded-full w-fit">
+                <div className="inline-flex items-center gap-2 text-base font-medium text-foreground bg-muted/80 px-4 py-2 rounded-full w-fit">
                   <Sparkles className="size-4 text-blue-500" />
                   <span className="gradient-text">AI-Powered</span> Education Platform
                 </div>
                 {/* Modern Hero Header with Gradient */}
-                <h1 className="text-4xl font-heading font-bold tracking-tighter sm:text-5xl xl:text-7xl/none">
-                  <span className="text-foreground">Transform Static Textbooks Into</span>
+                <h1 className="text-4xl font-heading font-bold sm:text-5xl xl:text-7xl/none">
+                  <span className="text-foreground">Transform Static Textbooks</span>
                   <br />
-                  <AnimatedText
-                    text="Intelligent Courses "
+                  <span className="whitespace-nowrap">Into <AnimatedText
+                    text="Intelligent Courses"
                     variant="heading"
                     className="gradient-text pb-2 min-h-[1.2em] inline-block align-top"
                     animation="typewriter"
                     duration={1.5}
                     delay={1}
-                  />
+                  /></span>
                 </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl opacity-70">
+                <p className="max-w-[600px] text-foreground md:text-xl">
                   Medhavy turns any textbook into a personalized, AI-curated conversational learning experience inside any LTI-compliant LMS. Built by educators, for educators.
                 </p>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="text-sm italic text-muted-foreground mt-2 border-l-4 border-blue-500 pl-4 bg-blue-50 dark:bg-blue-900/20 py-2 rounded-r"
+                  className="text-base italic text-foreground mt-2 border-l-4 border-blue-500 pl-4 bg-blue-50 dark:bg-blue-900/20 py-2 rounded-r"
                 >
                   Sanskrit meaning: <span className="font-semibold text-blue-600 dark:text-blue-400">मेधावी (Maydhavee)</span> means INTELLECTUALLY BRILLIANT—the perfect name for our AI-powered intelligent textbook system.
                 </motion.p>
@@ -88,7 +88,7 @@ export function HeroSection() {
                 <GradientButton
                   glowAmount={5}
                   className="px-6 py-2.5 text-base cursor-pointer"
-                  gradientFrom="from-red-500"
+                  gradientFrom="from-red-600"
                   gradientTo="to-red-700"
                   onClick={() => setIsDemoModalOpen(true)}
                 >
@@ -104,8 +104,15 @@ export function HeroSection() {
                   </span>
                 </GradientButton>
 
-                <GradientButton borderWidth={2} className="neumorphic-button">
-                  <Link href="#features" className="px-6 py-2.5 block">
+                <GradientButton 
+                  borderWidth={2}
+                  gradientFrom="from-slate-200"
+                  gradientTo="to-slate-300"
+                  gradientHoverFrom="from-red-600"
+                  gradientHoverTo="to-red-700"
+                  className="neumorphic-button"
+                >
+                  <Link href="#features" className="px-6 py-2.5 block group-hover:text-white">
                     View Features
                   </Link>
                 </GradientButton>
@@ -126,7 +133,7 @@ export function HeroSection() {
                     </Avatar>
                   ))}
                 </div>
-                <p className="text-sm text-muted-foreground flex items-center">
+                <p className="text-base text-foreground flex items-center">
                   <span className="inline-block w-2 h-2 rounded-full bg-red-600 mr-2"></span>
                   Trusted by 2,000+ Students worldwide
                 </p>

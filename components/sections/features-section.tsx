@@ -72,7 +72,7 @@ export function FeaturesSection() {
               <AnimatedText
                 text="Why leading institutions and educators are switching to Medhavy's AI-powered intelligent textbook system."
                 variant="paragraph"
-                className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70"
+                className="max-w-[900px] text-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
                 animation="fade"
                 delay={0.5}
               />
@@ -81,10 +81,10 @@ export function FeaturesSection() {
         </ScrollReveal>
 
         <ParallaxScroll baseVelocity={0.1} direction="up" className="py-12">
-          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
             {features.map((feature, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <GlowingTiltCard>
+                <GlowingTiltCard className="h-full">
                   <Card
                     className={`h-full glassmorphic-card border-none overflow-hidden group soft-glow ${feature.borderClass}`}
                   >
@@ -97,8 +97,8 @@ export function FeaturesSection() {
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
                       </CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-4">
-                      <CardDescription className="text-base opacity-70 transition-opacity duration-300 group-hover:opacity-100">
+                    <CardContent className="space-y-4 flex flex-col flex-grow">
+                      <CardDescription className="text-base transition-opacity duration-300 group-hover:opacity-100 flex-grow">
                         {feature.description}
                       </CardDescription>
 

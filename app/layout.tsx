@@ -11,11 +11,11 @@ import { PageTransition } from "@/components/page-transition"
 import "@/app/globals.css"
 import { Suspense } from "react"
 
-// Use only Google Fonts to avoid any local font references
+// Load multiple EB Garamond weights for better visual hierarchy
 const fontHeading = EB_Garamond({
   subsets: ["latin"],
   variable: "--font-heading",
-  weight: ["400"],
+  weight: ["400", "500", "600"],
 })
 
 export const metadata: Metadata = {

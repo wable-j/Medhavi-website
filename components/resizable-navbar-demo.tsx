@@ -62,7 +62,7 @@ export default function NavbarDemo() {
                                 key={`mobile-link-${idx}`}
                                 href={item.link}
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className="relative text-muted-foreground dark:text-muted-foreground/80"
+                                className="relative text-foreground dark:text-foreground/80"
                             >
                                 <span className="block">{item.name}</span>
                             </a>
@@ -99,7 +99,7 @@ const DummyContent = () => {
             <h1 className="mb-4 text-center text-3xl font-bold">
                 Check the navbar at the top of the container
             </h1>
-            <p className="mb-10 text-center text-sm text-muted-foreground">
+            <p className="mb-10 text-center text-base text-foreground">
                 For demo purpose we have kept the position as{" "}
                 <span className="font-medium">Sticky</span>. Keep in mind that this
                 component is <span className="font-medium">fixed</span> and will not

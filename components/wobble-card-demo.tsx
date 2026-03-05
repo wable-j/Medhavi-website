@@ -22,7 +22,7 @@ export default function WobbleCardDemo() {
                             <AnimatedText
                                 text="Transforming static educational content into intelligent, interactive experiences."
                                 variant="paragraph"
-                                className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70"
+                                className="max-w-[900px] text-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
                                 animation="fade"
                                 delay={1.0}
                             />

@@ -110,16 +110,16 @@ export function ProgressCard({
         </div>
         <div className="flex items-center gap-2">
           {getStatusIcon()}
-          {showPercentage && <span className="text-sm font-medium">{percentage}%</span>}
+          {showPercentage && <span className="text-base font-medium">{percentage}%</span>}
           {showFraction && (
-            <span className="text-sm text-muted-foreground">
+            <span className="text-base text-foreground">
               {progress}/{total}
             </span>
           )}
         </div>
       </div>
 
-      {description && <p className="text-sm text-muted-foreground mb-3">{description}</p>}
+      {description && <p className="text-base text-foreground mb-3">{description}</p>}
 
       <div className={cn("h-2 rounded-full overflow-hidden", trackColorClass)}>
         <motion.div

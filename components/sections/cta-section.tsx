@@ -26,7 +26,7 @@ export function CtaSection() {
               <AnimatedText
                 text="Medhavy turns textbooks into AI-curated, conversational courses inside any LTI-compliant LMS reducing faculty workload and giving students effortless access to knowledge."
                 variant="paragraph"
-                className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70"
+                className="max-w-[900px] text-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
                 animation="fade"
                 delay={0.3}
               />

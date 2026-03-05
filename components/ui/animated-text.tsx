@@ -111,7 +111,7 @@ export function AnimatedText({
   return (
     <motion.div
       ref={ref}
-      className={cn(variant === "heading" ? "font-heading" : "text-muted-foreground opacity-70", className)}
+      className={cn(variant === "heading" ? "font-heading" : "text-foreground", className)}
       initial="hidden"
       animate={controls}
       variants={defaultAnimations[animation]}
