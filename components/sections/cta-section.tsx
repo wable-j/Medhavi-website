@@ -12,7 +12,7 @@ import { OutlineButton } from "@/components/ui-library/buttons/button-variants"
 export function CtaSection() {
   return (
     <section id="cta" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-red-950/30 to-blue-950/30">
-      <div className="container px-6 md:px-8">
+      <div className="container px-4 md:px-4">
         <ScrollReveal>
           <div className="flex flex-col items-center justify-center space-y-6 text-center">
             <div className="space-y-4">

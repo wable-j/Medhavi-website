@@ -59,7 +59,7 @@ export function FeaturesSection() {
     <section id="features" className="relative w-full py-12 md:py-24 lg:py-32 overflow-hidden">
       <AnimatedBackground variant="dots" color="rgba(220, 38, 38, 0.05)" />
 
-      <div className="container px-6 md:px-8">
+      <div className="container px-4 md:px-4">
         <ScrollReveal>
           <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
             <div className="space-y-4">

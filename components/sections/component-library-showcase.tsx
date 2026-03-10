@@ -21,7 +21,7 @@ export function ComponentLibraryShowcase() {
 
   return (
     <section id="components" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-blue-50/40 to-blue-100/30 dark:from-blue-950/20 dark:to-blue-900/20 overflow-hidden">
-      <div className="container px-6 md:px-8">
+      <div className="container px-4 md:px-4">
         <ScrollReveal>
           <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
             <div className="space-y-4">

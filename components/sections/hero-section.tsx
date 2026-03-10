@@ -8,7 +8,7 @@ import { DemoRequestModal } from "@/components/demo-request-modal"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { InfiniteLogoCarousel } from "@/components/ui/infinite-logo-carousel"
 
-import { SpotlightCard } from "@/components/ui/spotlight-card"
+import { HeroSlideshow } from "@/components/ui/hero-slideshow"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { MagneticButton } from "@/components/ui/magnetic-button"
 import { AnimatedBackground } from "@/components/ui/animated-background"
@@ -135,19 +135,7 @@ export function HeroSection() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.3}>
-            <SpotlightCard className="relative h-[300px] md:h-[450px] w-full overflow-hidden rounded-xl border glassmorphic-card p-1 border-glow-red">
-              <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-transparent to-blue-900/20 z-10 pointer-events-none"></div>
-              <div className="relative z-20 h-full w-full rounded-xl bg-black overflow-hidden shadow-2xl">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/iT6pYsoCz60?si=eOkChzZhO4ubCFDO"
-                  title="Medhavy Introduction"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  referrerPolicy="strict-origin-when-cross-origin"
-                />
-              </div>
-            </SpotlightCard>
+            <HeroSlideshow />
           </ScrollReveal>
         </div>
         {/* infinite logo carousel */}
