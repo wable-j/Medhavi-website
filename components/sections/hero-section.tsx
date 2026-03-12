@@ -77,7 +77,7 @@ export function HeroSection() {
       <AnimatedBackground variant="gradient" color="rgba(220, 38, 38, 0.08)" secondaryColor="rgba(30, 64, 175, 0.08)" />
 
       <div className="container px-6 md:px-8">
-        <div className="grid gap-8 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+        <div className="grid items-center gap-8 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
           <ScrollReveal>
             <motion.div
               className="flex flex-col justify-center space-y-6"
@@ -98,9 +98,10 @@ export function HeroSection() {
                     {currentText}
                     <span className="animate-pulse inline-block w-[3px] h-[0.9em] align-middle bg-blue-500 ml-1 mb-1"></span>
                   </span>
-                  <span className="text-foreground whitespace-pre"> Courses</span>
+                  <br />
+                  <span className="text-foreground">Courses</span>
                 </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl opacity-70">
+                <p className="max-w-[800px] text-muted-foreground md:text-xl opacity-70">
                   Medhavy turns any textbook into a personalized, AI-curated conversational learning experience inside any LTI-compliant LMS. Built by educators, for educators.
                 </p>
                 <motion.p
@@ -157,7 +158,7 @@ export function HeroSection() {
                 </div>
                 <p className="text-sm text-muted-foreground flex items-center">
                   <span className="inline-block w-2 h-2 rounded-full bg-red-600 mr-2"></span>
-                  Trusted by 2,000+ Students worldwide
+                  Trusted by 70+ Users worldwide
                 </p>
               </motion.div>
             </motion.div>

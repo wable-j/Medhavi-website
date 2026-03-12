@@ -71,7 +71,7 @@ export function FaqSection() {
               <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl gradient-text">
                 Frequently Asked Questions
               </h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70">>
+              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70">
                 Common questions about transforming your learning experience with Medhavy.
               </p>
             </div>

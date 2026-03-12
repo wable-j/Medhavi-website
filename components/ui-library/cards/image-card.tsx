@@ -101,7 +101,7 @@ export function ImageCard({
           {tags && variant === "hover-reveal" && (
             <div className="flex flex-wrap gap-2">
               {tags.map((tag, i) => (
-                <Badge key={i} variant="secondary" className="bg-primary/20 text-primary-foreground">
+                <Badge key={i} variant="secondary" className="bg-red-500/20 text-red-900 dark:bg-red-500/30 dark:text-red-200 border-0 font-semibold px-3 py-1">
                   {tag}
                 </Badge>
               ))}
@@ -114,7 +114,7 @@ export function ImageCard({
         {tags && variant !== "hover-reveal" && (
           <div className="flex flex-wrap gap-2 mb-3">
             {tags.map((tag, i) => (
-              <Badge key={i} variant="secondary" className="bg-primary/20 text-primary-foreground">
+              <Badge key={i} variant="secondary" className="bg-red-500/20 text-red-900 dark:bg-red-500/30 dark:text-red-200 border-0 font-semibold px-3 py-1">
                 {tag}
               </Badge>
             ))}
