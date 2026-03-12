@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight, BookOpen, Sparkles, Zap } from "lucide-react"
 
@@ -31,6 +31,13 @@ export function HeroSlideshow() {
     const nextSlide = () => setCurrentSlide((p) => (p + 1) % slides.length)
     const prevSlide = () => setCurrentSlide((p) => (p - 1 + slides.length) % slides.length)
 
+    useEffect(() => {
+        const timer = setInterval(() => {
+            nextSlide()
+        }, 5000) // Change slide every 5 seconds
+        return () => clearInterval(timer)
+    }, [currentSlide])
+
     return (
         <div className="relative w-full h-[350px] md:h-[450px]">
             {/* Main Container */}
@@ -51,8 +58,8 @@ export function HeroSlideshow() {
                         <div
                             key={i}
                             className={`h-2.5 rounded-full transition-all duration-300 ${i === currentSlide
-                                    ? "bg-black/80 dark:bg-white/90 w-8"
-                                    : "bg-black/20 dark:bg-white/20 w-2.5"
+                                ? "bg-black/80 dark:bg-white/90 w-8"
+                                : "bg-black/20 dark:bg-white/20 w-2.5"
                                 }`}
                         />
                     ))}

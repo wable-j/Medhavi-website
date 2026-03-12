@@ -3,7 +3,7 @@
 import { motion, type Variants } from "framer-motion"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { DemoRequestModal } from "@/components/demo-request-modal"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { InfiniteLogoCarousel } from "@/components/ui/infinite-logo-carousel"
@@ -40,6 +40,38 @@ const itemVariants: Variants = {
 export function HeroSection() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
 
+  // Typewriter effect state
+  const [currentWordIndex, setCurrentWordIndex] = useState(0)
+  const [currentText, setCurrentText] = useState("")
+  const [isDeleting, setIsDeleting] = useState(false)
+  const words = ["Personalized", "Interactive", "Engaging", "Intelligent"]
+
+  useEffect(() => {
+    const word = words[currentWordIndex]
+
+    // Determine thinking/typing speed
+    const typingDelay = isDeleting ? 50 : 100
+
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        setCurrentText(word.substring(0, currentText.length + 1))
+        // Pause when word is completely typed
+        if (currentText.length === word.length) {
+          setTimeout(() => setIsDeleting(true), 2000)
+        }
+      } else {
+        setCurrentText(word.substring(0, currentText.length - 1))
+        // Move to next word when word is completely deleted
+        if (currentText.length === 0) {
+          setIsDeleting(false)
+          setCurrentWordIndex((prev) => (prev + 1) % words.length)
+        }
+      }
+    }, typingDelay)
+
+    return () => clearTimeout(timer)
+  }, [currentText, isDeleting, currentWordIndex])
+
   return (
     <section id="home" className="relative w-full py-12 md:py-24 lg:py-32 xl:py-48 overflow-hidden">
       <AnimatedBackground variant="gradient" color="rgba(220, 38, 38, 0.08)" secondaryColor="rgba(30, 64, 175, 0.08)" />
@@ -62,14 +94,11 @@ export function HeroSection() {
                 <h1 className="text-4xl font-heading font-bold tracking-tighter sm:text-5xl xl:text-7xl/none">
                   <span className="text-foreground">Transform Static Textbooks Into</span>
                   <br />
-                  <AnimatedText
-                    text="Intelligent Courses "
-                    variant="heading"
-                    className="gradient-text pb-2 min-h-[1.2em] inline-block align-top"
-                    animation="typewriter"
-                    duration={1.5}
-                    delay={1}
-                  />
+                  <span className="gradient-text pb-2 min-h-[1.2em] inline-block align-top">
+                    {currentText}
+                    <span className="animate-pulse inline-block w-[3px] h-[0.9em] align-middle bg-blue-500 ml-1 mb-1"></span>
+                  </span>
+                  <span className="text-foreground whitespace-pre"> Courses</span>
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl opacity-70">
                   Medhavy turns any textbook into a personalized, AI-curated conversational learning experience inside any LTI-compliant LMS. Built by educators, for educators.
