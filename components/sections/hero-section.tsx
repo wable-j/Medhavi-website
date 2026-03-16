@@ -158,7 +158,7 @@ export function HeroSection() {
                 </div>
                 <p className="text-sm text-muted-foreground flex items-center">
                   <span className="inline-block w-2 h-2 rounded-full bg-red-600 mr-2"></span>
-                  Trusted by 70+ Users worldwide
+                  Live in our first institutional pilot at Northeastern University — now accepting pilot partnership applications
                 </p>
               </motion.div>
             </motion.div>
