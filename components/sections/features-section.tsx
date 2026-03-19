@@ -7,30 +7,18 @@ import { GlowingTiltCard } from "@/components/ui/glowing-tilt-card"
 import { ParallaxScroll } from "@/components/ui/parallax-scroll"
 import { AnimatedText } from "@/components/ui/animated-text"
 import { AnimatedBackground } from "@/components/ui/animated-background"
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid"
 import { cn } from "@/lib/utils"
 
 export function FeaturesSection() {
-  const features = [
-    {
-      icon: <Brain className="h-10 w-10 text-red-500" />,
-      title: "Learning Science Rooted",
-      description: "Built on conceptual scaffolding, spaced repetition, and evidence-based teaching practices.",
-      borderClass: "border-glow-red",
-      color: "red",
-    },
+  const liveFeatures = [
     {
       icon: <BookOpen className="h-10 w-10 text-blue-500" />,
-      title: "Strictly Grounded AI / No hallucinations",
-      description: "AI answers strictly from your uploaded course materials. When a question falls outside the content, the system says so.",
+      title: "Conversational Textbooks",
+      description: "Students ask questions in natural language and receive answers grounded in your course content—created using conceptual scaffolding principles.",
       borderClass: "border-glow-blue",
       color: "blue",
-    },
-    {
-      icon: <Clock className="h-10 w-10 text-blue-500" />,
-      title: "Effortless Course Prep",
-      description: "Automated content ingestion reduces course preparation time significantly.",
-      borderClass: "border-glow-blue",
-      color: "blue",
+      colSpan: "md:col-span-2",
     },
     {
       icon: <Users className="h-10 w-10 text-blue-500" />,
@@ -38,20 +26,31 @@ export function FeaturesSection() {
       description: "Your AI co-instructor drafts quizzes, summaries, and lecture notes for your review.",
       borderClass: "border-glow-blue",
       color: "blue",
+      colSpan: "md:col-span-1",
+    },
+  ]
+
+  const roadmapFeatures = [
+    {
+      icon: <Brain className="h-10 w-10 text-purple-500" />,
+      title: "Unified Learning Platform",
+      description: "One cohesive experience. Unifies textbooks, PDFs, and LMS content—eliminating platform jumping.",
+      borderClass: "border-glow-purple",
+      color: "purple",
     },
     {
-      icon: <BarChart className="h-10 w-10 text-blue-500" />,
-      title: "Actionable Analytics",
-      description: "Real-time insights into student engagement, question patterns, and learning gaps.",
-      borderClass: "border-glow-blue",
-      color: "blue",
+      icon: <ShieldCheck className="h-10 w-10 text-purple-500" />,
+      title: "Practice Mode",
+      description: "Interactive environments for students to safely apply concepts and receive immediate feedback.",
+      borderClass: "border-glow-purple",
+      color: "purple",
     },
     {
-      icon: <ShieldCheck className="h-10 w-10 text-red-500" />,
-      title: "FERPA Compliant",
-      description: "FERPA-compliant architecture.",
-      borderClass: "border-glow-red",
-      color: "red",
+      icon: <BarChart className="h-10 w-10 text-purple-500" />,
+      title: "Exam Prep",
+      description: "Targeted review sessions proactively generated based on areas where the class struggled most.",
+      borderClass: "border-glow-purple",
+      color: "purple",
     },
   ]
 
@@ -86,62 +85,137 @@ export function FeaturesSection() {
           </div>
         </ScrollReveal>
 
-        <ParallaxScroll baseVelocity={0.1} direction="up" className="py-12">
-          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature, index) => (
-              <ScrollReveal key={index} delay={index * 0.1} className="h-full">
-                <GlowingTiltCard className="h-full">
-                  <Card
-                    className={`h-full flex flex-col glassmorphic-card border-none overflow-hidden group soft-glow ${feature.borderClass}`}
-                  >
-                    <CardHeader>
-                      <div className="p-2 rounded-xl w-fit bg-muted/50 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                        {feature.icon}
-                      </div>
-                      <CardTitle className="mt-4 tracking-tight relative">
-                        {feature.title}
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4 flex flex-col flex-grow h-full">
-                      <CardDescription className="text-base opacity-70 transition-opacity duration-300 group-hover:opacity-100 flex-grow">
-                        {feature.description}
-                      </CardDescription>
+        <div className="py-12 w-full max-w-6xl mx-auto space-y-24">
+          
+          {/* Live Features Section */}
+          <div className="space-y-8">
+            <div className="flex items-center gap-4">
+              <h3 className="text-2xl font-bold tracking-tight">Live Now</h3>
+              <div className="h-[1px] flex-1 bg-border/50"></div>
+            </div>
+            
+            <BentoGrid className="max-w-6xl mx-auto w-full md:auto-rows-[22rem]">
+              {liveFeatures.map((feature, index) => (
+                <ScrollReveal 
+                  key={`live-${index}`} 
+                  delay={index * 0.1} 
+                  className={cn("h-full w-full", feature.colSpan)}
+                >
+                  <GlowingTiltCard className="h-full w-full">
+                    <Card
+                      className={`h-full w-full flex flex-col glassmorphic-card border-none overflow-hidden group soft-glow ${feature.borderClass}`}
+                    >
+                      <CardHeader className="flex-[0]">
+                        <div className="p-3 rounded-xl w-fit bg-blue-500/10 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                          {feature.icon}
+                        </div>
+                        <CardTitle className="mt-6 text-2xl tracking-tight relative">
+                          {feature.title}
+                          <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="space-y-4 flex flex-col flex-1 mt-4">
+                        <CardDescription className="text-lg opacity-80 transition-opacity duration-300 group-hover:opacity-100 flex-grow leading-relaxed">
+                          {feature.description}
+                        </CardDescription>
 
-                      {/* Modern animated accent to replace percentage badges */}
-                      <div className="mt-8 pt-4 flex items-center justify-between gap-4 justify-self-end mt-auto">
-                        <div className={cn(
-                          "relative flex h-3 w-3 items-center justify-center",
-                          "group-hover:scale-125 transition-transform duration-500"
-                        )}>
-                          <span className={cn(
-                            "absolute inline-flex h-full w-full animate-ping rounded-full opacity-75 duration-1000",
-                            feature.color === 'red' ? "bg-red-500" : "bg-blue-500"
-                          )}></span>
-                          <span className={cn(
-                            "relative inline-flex h-2 w-2 rounded-full",
-                            feature.color === 'red' ? "bg-red-600" : "bg-blue-600"
-                          )}></span>
+                        {/* Modern animated accent */}
+                        <div className="pt-6 flex items-center justify-between gap-4 justify-self-end mt-auto">
+                          <div className={cn(
+                            "relative flex h-3 w-3 items-center justify-center",
+                            "group-hover:scale-125 transition-transform duration-500"
+                          )}>
+                            <span className={cn(
+                              "absolute inline-flex h-full w-full animate-ping rounded-full opacity-75 duration-1000 bg-blue-500"
+                            )}></span>
+                            <span className={cn(
+                              "relative inline-flex h-2 w-2 rounded-full bg-blue-600"
+                            )}></span>
+                          </div>
+                          <div className="relative h-[2px] w-full overflow-hidden rounded-full bg-secondary/40">
+                            <div 
+                              className={cn(
+                                "absolute inset-y-0 w-1/3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300",
+                                "bg-gradient-to-r from-transparent via-blue-500/80 to-transparent"
+                              )}
+                              style={{ animation: 'cyber-shimmer 2.5s ease-in-out infinite' }}
+                            />
+                          </div>
                         </div>
-                        <div className="relative h-[2px] w-full overflow-hidden rounded-full bg-secondary/40">
-                          <div 
-                            className={cn(
-                              "absolute inset-y-0 w-1/3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300",
-                              feature.color === 'red' 
-                                ? "bg-gradient-to-r from-transparent via-red-500/80 to-transparent" 
-                                : "bg-gradient-to-r from-transparent via-blue-500/80 to-transparent"
-                            )}
-                            style={{ animation: 'cyber-shimmer 2.5s ease-in-out infinite' }}
-                          />
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </GlowingTiltCard>
-              </ScrollReveal>
-            ))}
+                      </CardContent>
+                    </Card>
+                  </GlowingTiltCard>
+                </ScrollReveal>
+              ))}
+            </BentoGrid>
           </div>
-        </ParallaxScroll>
+
+          {/* Roadmap Features Section */}
+          <div className="space-y-8">
+            <div className="flex items-center gap-4 opacity-70">
+              <h3 className="text-2xl font-bold tracking-tight text-muted-foreground flex items-center gap-3">
+                <Clock className="h-6 w-6" />
+                Coming Soon
+              </h3>
+              <div className="h-[1px] flex-1 bg-border/30 dashed"></div>
+            </div>
+
+            <div className="mx-auto grid max-w-6xl w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {roadmapFeatures.map((feature, index) => (
+                <ScrollReveal key={`roadmap-${index}`} delay={index * 0.1} className="h-full w-full">
+                  <div className="relative h-full w-full">
+                    <Card
+                      className={`h-full w-full flex flex-col glassmorphic-card overflow-hidden group border-dashed border-2 border-muted-foreground/20 hover:border-purple-500/30 transition-colors duration-500 bg-background/40 backdrop-blur-sm`}
+                    >
+                      <CardHeader className="flex-[0]">
+                        <div className="p-2 rounded-xl w-fit bg-purple-500/5 transition-transform duration-300 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                          {feature.icon}
+                        </div>
+                        <CardTitle className="mt-4 tracking-tight relative text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                          {feature.title}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="space-y-4 flex flex-col flex-1">
+                        <CardDescription className="text-base opacity-60 transition-opacity duration-300 group-hover:opacity-80 flex-grow">
+                          {feature.description}
+                        </CardDescription>
+
+                        {/* Muted animated accent */}
+                        <div className="mt-6 pt-4 flex items-center justify-between gap-4 justify-self-end mt-auto opacity-50 group-hover:opacity-80 transition-opacity duration-300">
+                          <div className={cn(
+                            "relative flex h-2 w-2 items-center justify-center",
+                            "group-hover:scale-110 transition-transform duration-500"
+                          )}>
+                            <span className={cn(
+                              "relative inline-flex h-2 w-2 rounded-full",
+                              "bg-purple-500/40"
+                            )}></span>
+                          </div>
+                          <div className="relative h-[1px] w-full overflow-hidden rounded-full bg-border/30">
+                            <div 
+                              className={cn(
+                                "absolute inset-y-0 w-1/4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500",
+                                "bg-gradient-to-r from-transparent via-purple-500/40 to-transparent"
+                              )}
+                              style={{ animation: 'cyber-shimmer 4s ease-in-out infinite' }}
+                            />
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                    
+                    {/* Coming Soon Badge Overlay */}
+                    <div className="absolute top-4 right-4 z-10 pointer-events-none">
+                      <div className="px-3 py-1 rounded-full text-[10px] font-medium uppercase tracking-wider bg-secondary/80 text-secondary-foreground border border-border backdrop-blur-md shadow-sm">
+                        Roadmap
+                      </div>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )

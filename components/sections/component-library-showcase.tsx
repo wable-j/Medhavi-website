@@ -148,6 +148,9 @@ function ModernFeatureCard({
                   </div>
                 </div>
               </div>
+              <div className="py-1.5 px-3 text-[10px] text-center text-neutral-500 dark:text-neutral-500 bg-neutral-50 dark:bg-[#111] border-t border-neutral-200 dark:border-neutral-800">
+                Sample dashboard — actual metrics vary by deployment.
+              </div>
             </div>
           )}
 
@@ -217,6 +220,9 @@ function ModernFeatureCard({
                   </div>
                 </div>
               </div>
+              <div className="py-1.5 px-3 text-[10px] text-center text-neutral-500 dark:text-neutral-500 bg-neutral-50 dark:bg-[#111] border-t border-neutral-200 dark:border-neutral-800">
+                Sample dashboard — actual metrics vary by deployment.
+              </div>
             </div>
           )}
 
@@ -285,6 +291,9 @@ function ModernFeatureCard({
                     </p>
                   </div>
                 </div>
+              </div>
+              <div className="py-1.5 px-3 text-[10px] text-center text-neutral-500 dark:text-neutral-500 bg-neutral-50 dark:bg-[#111] border-t border-neutral-200 dark:border-neutral-800">
+                Sample dashboard — actual metrics vary by deployment.
               </div>
             </div>
           )}
