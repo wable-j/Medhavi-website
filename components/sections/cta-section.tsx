@@ -62,8 +62,8 @@ export function CtaSection() {
                 borderWidth={1}
                 duration={6}
               >
-                <OutlineButton size="lg" className="bg-background w-full h-full border-0 px-8 py-3" asChild>
-                  <Link href="#components">Learn More</Link>
+                <OutlineButton size="lg" className="bg-background w-full h-full border-0 px-8 py-3">
+                  Apply for a Pilot Partnership
                 </OutlineButton>
               </AnimatedGradientBorder>
             </motion.div>

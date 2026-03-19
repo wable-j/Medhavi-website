@@ -103,10 +103,10 @@ export function SiteFooter() {
                 </li>
                 <li>
                   <Link
-                    href="#contact"
+                    href="mailto:medhavy@humanitarians.ai"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Contact
+                    medhavy@humanitarians.ai
                   </Link>
                 </li>
               </ul>
