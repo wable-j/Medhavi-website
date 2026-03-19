@@ -91,14 +91,12 @@ export function HeroSection() {
                   <span className="gradient-text">AI-Powered</span> Education Platform
                 </div>
                 {/* Modern Hero Header with Gradient */}
-                <h1 className="text-4xl font-heading font-bold tracking-tighter sm:text-5xl xl:text-7xl/none">
+                <h1 className="text-4xl font-heading font-bold tracking-tighter sm:text-5xl xl:text-7xl leading-[1.1] sm:leading-[1.1] xl:leading-[1.1] flex flex-col">
                   <span className="text-foreground">Transform Static Textbooks Into</span>
-                  <br />
-                  <span className="gradient-text pb-2 min-h-[1.2em] inline-block align-top">
-                    {currentText}
-                    <span className="animate-pulse inline-block w-[3px] h-[0.9em] align-middle bg-blue-500 ml-1 mb-1"></span>
+                  <span className="gradient-text min-h-[1.1em]">
+                    {currentText}&#8203;
+                    <span className="animate-pulse inline-block w-[3px] h-[0.8em] align-baseline bg-blue-500 ml-1"></span>
                   </span>
-                  <br />
                   <span className="text-foreground">Courses</span>
                 </h1>
                 <p className="max-w-[800px] text-muted-foreground md:text-xl opacity-70">
