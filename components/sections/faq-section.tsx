@@ -1,7 +1,56 @@
 "use client"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { ScrollReveal } from "@/components/scroll-reveal"
 import * as React from "react"
+import { ScrollReveal } from "@/components/scroll-reveal"
+import { Plus, Minus } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+
+function FaqItem({ 
+  question, 
+  answer, 
+  isOpen, 
+  onToggle 
+}: { 
+  question: string; 
+  answer: string; 
+  isOpen: boolean; 
+  onToggle: () => void;
+}) {
+  return (
+    <div className="glassmorphic-accordion-item border-b border-border/50 py-5">
+      <button
+        onClick={onToggle}
+        className="flex w-full items-start text-left gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm group"
+      >
+        <div className="flex-shrink-0 mt-[2px]">
+          {isOpen ? (
+            <Minus className="h-[20px] w-[20px] text-foreground transition-transform duration-200" strokeWidth={1.5} />
+          ) : (
+            <Plus className="h-[20px] w-[20px] text-foreground transition-transform duration-200" strokeWidth={1.5} />
+          )}
+        </div>
+        <span className="text-base font-medium tracking-tight text-foreground transition-all group-hover:underline">
+          {question}
+        </span>
+      </button>
+
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="overflow-hidden"
+          >
+            <div className="pl-9 pt-3 pb-2 text-sm text-muted-foreground opacity-70">
+              {answer}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
 
 export function FaqSection() {
   const faqs = [
@@ -60,53 +109,59 @@ export function FaqSection() {
   ]
 
   const [showAll, setShowAll] = React.useState(false)
-  const visibleFaqs = showAll ? faqs : faqs.slice(0, 4)
+  const [openIndex, setOpenIndex] = React.useState<number | null>(null)
+  const visibleFaqs = showAll ? faqs : faqs.slice(0, 5)
 
   return (
-    <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-blue-50/40 to-blue-100/30 dark:from-blue-950/20 dark:to-blue-900/20">
-      <div className="container px-4 md:px-4">
-        <ScrollReveal>
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl gradient-text">
-                Frequently Asked Questions
+    <section id="faq" className="w-full py-20 lg:py-32 bg-gradient-to-br from-blue-50/40 to-blue-100/30 dark:from-blue-950/20 dark:to-blue-900/20 overflow-hidden">
+      <div className="container px-4 md:px-8 mx-auto xl:max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
+          
+          <div className="md:col-span-5 lg:col-span-4 md:sticky md:top-32 h-fit">
+            <ScrollReveal>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold tracking-tighter gradient-text leading-[1.05]">
+                Frequently <br className="hidden md:block" />
+                asked <br className="hidden md:block" />
+                questions
               </h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70">
-                Common questions about transforming your learning experience with Medhavy.
-              </p>
-            </div>
+            </ScrollReveal>
           </div>
-        </ScrollReveal>
 
-        <div className="mx-auto max-w-3xl py-12">
-          <ScrollReveal>
-            <Accordion type="single" collapsible className="w-full">
-              {visibleFaqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="glassmorphic-accordion-item">
-                  <AccordionTrigger className="text-left font-medium tracking-tight">{faq.question}</AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground opacity-70">{faq.answer}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+          <div className="md:col-span-7 lg:col-span-7 lg:col-start-6 flex flex-col pt-4 md:pt-0">
+            <ScrollReveal delay={0.1}>
+              <div className="flex flex-col border-t border-border/50">
+                {visibleFaqs.map((faq, index) => (
+                  <FaqItem 
+                    key={index} 
+                    question={faq.question} 
+                    answer={faq.answer} 
+                    isOpen={openIndex === index}
+                    onToggle={() => setOpenIndex(openIndex === index ? null : index)}
+                  />
+                ))}
+              </div>
 
-            <div className="mt-8 flex justify-center">
-              <button
-                onClick={() => setShowAll(!showAll)}
-                className="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-md bg-primary px-8 font-medium text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:ring-2 hover:ring-primary hover:ring-offset-2 ring-offset-background"
-              >
-                <span className="mr-2">{showAll ? "Show Less" : "Show More FAQs"}</span>
-                <span className="relative flex h-4 w-4 overflow-hidden">
-                  <span className={`absolute transition-all duration-300 ${showAll ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}>
-                    ↓
-                  </span>
-                  <span className={`absolute transition-all duration-300 ${showAll ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}>
-                    ↑
-                  </span>
-                </span>
-                <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-primary/80 to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              </button>
-            </div>
-          </ScrollReveal>
+              {faqs.length > 5 && (
+                <div className="mt-8 flex">
+                  <button
+                    onClick={() => setShowAll(!showAll)}
+                    className="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-md bg-primary px-8 font-medium text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:ring-2 hover:ring-primary hover:ring-offset-2 ring-offset-background"
+                  >
+                    <span className="mr-2">{showAll ? "Show Less" : "Show More FAQs"}</span>
+                    <span className="relative flex h-4 w-4 overflow-hidden">
+                      <span className={`absolute transition-all duration-300 ${showAll ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}>
+                        ↓
+                      </span>
+                      <span className={`absolute transition-all duration-300 ${showAll ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}>
+                        ↑
+                      </span>
+                    </span>
+                    <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-primary/80 to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  </button>
+                </div>
+              )}
+            </ScrollReveal>
+          </div>
         </div>
       </div>
     </section>

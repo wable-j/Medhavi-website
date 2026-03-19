@@ -59,7 +59,7 @@ export function DemoRequestModal({ isOpen, onClose }: DemoRequestModalProps) {
                         {/* Header */}
                         <div className="relative z-10 flex items-center justify-between px-6 py-4 border-b border-border/10">
                             <h2 className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-red-600 dark:from-blue-400 dark:to-red-400">
-                                Request a Demo
+                                Find out more
                             </h2>
                             <button
                                 onClick={onClose}

@@ -46,7 +46,7 @@ export function CtaSection() {
                 asChild
               >
                 <Link href="#pricing" className="flex items-center">
-                  Request a Demo
+                  Find out more
                   <motion.span
                     className="ml-2 inline-block"
                     animate={{ x: [0, 5, 0] }}

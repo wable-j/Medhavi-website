@@ -123,7 +123,7 @@ export function HeroSection() {
                   onClick={() => setIsDemoModalOpen(true)}
                 >
                   <span className="flex items-center">
-                    Request a Demo
+                    Find out more
                     <motion.span
                       className="ml-2 inline-block"
                       animate={{ x: [0, 4, 0] }}
@@ -134,11 +134,11 @@ export function HeroSection() {
                   </span>
                 </GradientButton>
 
-                <GradientButton borderWidth={2} className="neumorphic-button">
+                {/* <GradientButton borderWidth={2} className="neumorphic-button">
                   <Link href="#features" className="px-6 py-2.5 block">
                     View Features
                   </Link>
-                </GradientButton>
+                </GradientButton> */}
               </motion.div>
 
               <motion.div variants={itemVariants} className="pt-4">

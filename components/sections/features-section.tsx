@@ -56,7 +56,8 @@ export function FeaturesSection() {
 
   return (
     <section id="features" className="relative w-full py-12 md:py-24 lg:py-32 overflow-hidden">
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes cyber-shimmer {
           0% { transform: translateX(-100%); }
           100% { transform: translateX(300%); }
@@ -75,7 +76,7 @@ export function FeaturesSection() {
                 animation="slide"
               />
               <AnimatedText
-                text="Why leading institutions and educators are switching to Medhavy's AI-powered intelligent textbook system."
+                text="Why leading institutions and educators are using Medhavy's AI-powered intelligent textbook system."
                 variant="paragraph"
                 className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed opacity-70"
                 animation="fade"
@@ -86,19 +87,19 @@ export function FeaturesSection() {
         </ScrollReveal>
 
         <div className="py-12 w-full max-w-6xl mx-auto space-y-24">
-          
+
           {/* Live Features Section */}
           <div className="space-y-8">
             <div className="flex items-center gap-4">
               <h3 className="text-2xl font-bold tracking-tight">Live Now</h3>
               <div className="h-[1px] flex-1 bg-border/50"></div>
             </div>
-            
+
             <BentoGrid className="max-w-6xl mx-auto w-full md:auto-rows-[22rem]">
               {liveFeatures.map((feature, index) => (
-                <ScrollReveal 
-                  key={`live-${index}`} 
-                  delay={index * 0.1} 
+                <ScrollReveal
+                  key={`live-${index}`}
+                  delay={index * 0.1}
                   className={cn("h-full w-full", feature.colSpan)}
                 >
                   <GlowingTiltCard className="h-full w-full">
@@ -133,7 +134,7 @@ export function FeaturesSection() {
                             )}></span>
                           </div>
                           <div className="relative h-[2px] w-full overflow-hidden rounded-full bg-secondary/40">
-                            <div 
+                            <div
                               className={cn(
                                 "absolute inset-y-0 w-1/3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300",
                                 "bg-gradient-to-r from-transparent via-blue-500/80 to-transparent"
@@ -192,7 +193,7 @@ export function FeaturesSection() {
                             )}></span>
                           </div>
                           <div className="relative h-[1px] w-full overflow-hidden rounded-full bg-border/30">
-                            <div 
+                            <div
                               className={cn(
                                 "absolute inset-y-0 w-1/4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500",
                                 "bg-gradient-to-r from-transparent via-purple-500/40 to-transparent"
@@ -203,7 +204,7 @@ export function FeaturesSection() {
                         </div>
                       </CardContent>
                     </Card>
-                    
+
                     {/* Coming Soon Badge Overlay */}
                     <div className="absolute top-4 right-4 z-10 pointer-events-none">
                       <div className="px-3 py-1 rounded-full text-[10px] font-medium uppercase tracking-wider bg-secondary/80 text-secondary-foreground border border-border backdrop-blur-md shadow-sm">
